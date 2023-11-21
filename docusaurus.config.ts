@@ -10,11 +10,12 @@ const config: Config = {
   tagline: 'Frontend made easy',
   favicon: 'img/favicon.ico', // TODO: update
 
-  url: 'https://smile-sa.github.io/',
+  url: 'https://smile-sa.github.io',
   baseUrl: '/react-front-kit-doc/',
 
   organizationName: 'Smile-SA',
   projectName: 'react-front-kit-doc',
+  trailingSlash: false,
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
