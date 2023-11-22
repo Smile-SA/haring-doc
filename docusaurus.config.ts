@@ -31,7 +31,7 @@ const config: Config = {
       {
         docs: {
           sidebarPath: './sidebars.ts',
-          editUrl: 'https://github.com/Smile-SA/react-front-kit/blob/main/',
+          editUrl: 'https://github.com/Smile-SA/react-front-kit-doc/blob/main/',
         },
         theme: {
           customCss: './src/css/custom.css',
@@ -58,6 +58,11 @@ const config: Config = {
         {
           href: 'https://github.com/Smile-SA/react-front-kit',
           label: 'GitHub',
+          position: 'right',
+        },
+        {
+          href: 'https://smile-sa.github.io/react-front-kit',
+          label: 'Storybook',
           position: 'right',
         },
       ],
@@ -97,6 +102,10 @@ const config: Config = {
             {
               label: 'React Front Kit GitHub',
               href: 'https://github.com/Smile-SA/react-front-kit',
+            },
+            {
+              label: 'React Front Kit Storybook',
+              href: 'https://smile-sa.github.io/react-front-kit',
             },
             {
               label: 'Mantine',
