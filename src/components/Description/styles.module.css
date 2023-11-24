@@ -1,4 +1,27 @@
+.descriptionContainer {
+  & ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  & li {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    height: 22px;
+  }
+}
+
 .description {
   font-size: 1.5rem;
   color: #808080;
+}
+
+.codeBlock {
+  margin: 0;
+
+  & code {
+    padding: 0 5px;
+  }
 }
