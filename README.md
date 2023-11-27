@@ -1,6 +1,6 @@
-# React Front Kit Connectors Docs
+# React Front Kit Docs
 
-This is the documentation website for the [React Front Kit Connectors](https://git.smile.fr/modular-front-kit/front-kit-connectors-doc) library.
+This is the documentation website for the [React Front Kit](https://github.com/Smile-SA/react-front-kit) library.
 
 ## Doc
 
