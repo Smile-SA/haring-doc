@@ -8,17 +8,29 @@ import { NpmLogo } from '@site/src/icons/NpmLogo';
 
 import styles from './styles.module.css';
 
-interface IDescriptionProps {
+interface IDescriptionExtends {
+  label: string;
+  link: string;
+  logo?: ReactNode;
+}
+
+interface IDescriptionPackage {
+  label: string;
+  link: string;
+  logo?: ReactElement;
+}
+
+interface IDescriptionSource {
+  link: string;
+  logo?: ReactElement;
+}
+
+export interface IDescriptionProps {
   children: ReactNode;
-  extendsLinks?: string[];
-  extendsLogos?: ReactElement[];
-  extendsTexts?: string[];
+  extendsInfo: IDescriptionExtends[];
   importExample: string;
-  packageLink: string;
-  packageLogo?: ReactElement;
-  packageText: string;
-  sourceLink: string;
-  sourceLogo?: ReactElement;
+  packageInfo: IDescriptionPackage;
+  sourceInfo: IDescriptionSource;
 }
 
 /**
@@ -29,15 +41,10 @@ interface IDescriptionProps {
 export default function Description(props: IDescriptionProps): ReactNode {
   const {
     children,
-    extendsLinks,
-    extendsLogos = [<MantineLogo key={0} />],
-    extendsTexts,
+    extendsInfo = [],
     importExample,
-    packageLink,
-    packageLogo = <NpmLogo />,
-    packageText,
-    sourceLink,
-    sourceLogo = <GitHubLogo />,
+    packageInfo,
+    sourceInfo,
   } = props;
   return (
     <div className={styles.descriptionContainer}>
@@ -49,26 +56,26 @@ export default function Description(props: IDescriptionProps): ReactNode {
             {importExample}
           </CodeBlock>
         </li>
-        {extendsTexts && extendsLinks ? (
+        {extendsInfo.length > 0 ? (
           <li>
             <span>Extends</span>
-            {extendsLinks.map((link, i) => (
-              <a key={i} href={link} rel="noreferrer" target="_blank">
-                {extendsLogos[i] ?? extendsLogos[0]} {extendsTexts[i]}
+            {extendsInfo.map(({ label, link, logo }, i) => (
+              <a key={i + label} href={link} rel="noreferrer" target="_blank">
+                {logo ?? <MantineLogo />} {label}
               </a>
             ))}
           </li>
         ) : null}
         <li>
           <span>Source</span>
-          <a href={sourceLink} rel="noreferrer" target="_blank">
-            {sourceLogo} View Source Code
+          <a href={sourceInfo.link} rel="noreferrer" target="_blank">
+            {sourceInfo.logo ?? <GitHubLogo />} View Source Code
           </a>
         </li>
         <li>
           <span>Package</span>
-          <a href={packageLink} rel="noreferrer" target="_blank">
-            {packageLogo} {packageText}
+          <a href={packageInfo.link} rel="noreferrer" target="_blank">
+            {packageInfo.logo ?? <NpmLogo />} {packageInfo.label}
           </a>
         </li>
       </ul>
