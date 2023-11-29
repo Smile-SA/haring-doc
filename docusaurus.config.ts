@@ -41,6 +41,14 @@ const config: Config = {
   ],
 
   themeConfig: {
+    algolia: {
+      appId: 'DDS84I62YB',
+      apiKey: '8d863728adfc1afe75e4a43f7387cdf7',
+      indexName: 'react-front-kit',
+      contextualSearch: false,
+      searchParameters: {},
+      searchPagePath: 'search',
+    },
     image: 'img/docusaurus-social-card.jpg',
     navbar: {
       title: 'React Front Kit',
