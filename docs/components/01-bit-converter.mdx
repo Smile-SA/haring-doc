@@ -1,13 +1,13 @@
-import StorybookEmbed from '../../src/components/StorybookEmbed';
-import Description from '../../src/components/Description';
+import StorybookEmbed from '../../src/components/StorybookEmbed/StorybookEmbed';
+import Description from '../../src/components/Description/Description';
 
 # Bit Converter
 
 <Description
   importExample="import { BitConverter } from '@smile/react-front-kit';"
-  sourceLink={
-    'https://github.com/Smile-SA/react-front-kit/blob/main/packages/react-front-kit/src/Components/BitConverter/BitConverter.tsx'
-  }
+  packageLink="https://www.npmjs.com/package/@smile/react-front-kit"
+  packageText="@smile/react-front-kit"
+  sourceLink="https://github.com/Smile-SA/react-front-kit/blob/main/packages/react-front-kit/src/Components/BitConverter/BitConverter.tsx"
 >
   Converts byte value into human-readable string using [Pretty
   Bytes](https://github.com/sindresorhus/pretty-bytes)
@@ -15,10 +15,13 @@ import Description from '../../src/components/Description';
 
 ## Usage
 
-TODO
-
-<StorybookEmbed storyId="3-custom-components-bitconverter--docs" height="600" />
+<StorybookEmbed storyId="3-custom-components-bitconverter--docs" height="580" />
 
 ## Props
 
-TODO
+| Name            | Type                                                                           | Default | Description                                                                        |
+| --------------- | ------------------------------------------------------------------------------ | ------- | ---------------------------------------------------------------------------------- |
+| options         | [`Options`](https://github.com/sindresorhus/pretty-bytes/blob/main/index.d.ts) | -       | `options` passed to [prettyBytes()](https://github.com/sindresorhus/pretty-bytes)) |
+| value <b>\*</b> | `number`                                                                       | -       | The `number` value to format                                                       |
+
+(<b>`*`</b> required prop)

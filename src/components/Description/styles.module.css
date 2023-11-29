@@ -1,7 +1,7 @@
 .descriptionContainer {
   & ul {
     margin: 0;
-    padding: 0;
+    padding: 10px 0 0 0;
     list-style: none;
   }
 
@@ -10,12 +10,35 @@
     gap: 10px;
     align-items: center;
     height: 22px;
+    margin: 5px 0;
+
+    & :first-child {
+      font-size: 0.9rem;
+      color: #808080;
+      flex-basis: 80px;
+    }
+
+    & a {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-items: center;
+      gap: 10px;
+
+      & :last-child {
+        flex: 1;
+      }
+    }
   }
 }
 
 .description {
   font-size: 1.5rem;
   color: #808080;
+
+  & p {
+    margin: 0;
+  }
 }
 
 .codeBlock {

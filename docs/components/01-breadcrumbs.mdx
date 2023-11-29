@@ -1,0 +1,29 @@
+import StorybookEmbed from '../../src/components/StorybookEmbed/StorybookEmbed';
+import Description from '../../src/components/Description/Description';
+
+# Breadcrumbs
+
+<Description
+  extendsText="Breadcrumbs"
+  extendsLink="https://v6.mantine.dev/core/breadcrumbs"
+  importExample="import { Breadcrumbs } from '@smile/react-front-kit';"
+  packageLink="https://www.npmjs.com/package/@smile/react-front-kit"
+  packageText="@smile/react-front-kit"
+  sourceLink="https://github.com/Smile-SA/react-front-kit/blob/main/packages/react-front-kit/src/Components/Breadcrumbs/Breadcrumbs.tsx"
+>
+  Separate list of react nodes with given separator
+</Description>
+
+## Usage
+
+<StorybookEmbed storyId="3-custom-components-breadcrumbs--docs" height="600" />
+
+## Props
+
+| Name               | Type        | Default                                                                                                                                                                                                                                                                 | Description                                                                   |
+| ------------------ | ----------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| children <b>\*</b> | `ReactNode` | -                                                                                                                                                                                                                                                                       | Elements inserted after the Breadcrumbs on the same row                       |
+| separator          | `string`    | <svg     fill ="none"     height ="14"     viewBox ="0 0 14 14"     width ="14"     xmlns ="http://www.w3.org/2000/svg"  > <path       d ="M5.25 10.5L8.75 7L5.25 3.5"       stroke ="#0B7285"       strokeLinecap ="round"       strokeLinejoin ="round"     /> </svg> | The `string` or SVG used as a separator between each level                    |
+| ...                | -           | -                                                                                                                                                                                                                                                                       | extends [Breadcrumbs props](https://v6.mantine.dev/core/breadcrumbs/?t=props) |
+
+(<b>`*`</b> required prop)

@@ -1,0 +1,32 @@
+import StorybookEmbed from '../../src/components/StorybookEmbed/StorybookEmbed';
+import Description from '../../src/components/Description/Description';
+
+# Dropzone
+
+<Description
+  extendsText="Dropzone"
+  extendsLink="https://v6.mantine.dev/others/dropzone/"
+  importExample="import { Dropzone } from '@smile/react-front-kit-dropzone';"
+  packageLink="https://www.npmjs.com/package/@smile/react-front-kit-dropzone"
+  packageText="@smile/react-front-kit-dropzone"
+  sourceLink="https://github.com/Smile-SA/react-front-kit/blob/main/packages/react-front-kit-dropzone/src/Components/Dropzone/Dropzone.tsx"
+>
+  Capture files from user with drag and drop
+</Description>
+
+## Storybook Docs
+
+<StorybookEmbed storyId="3-custom-components-dropzone--docs" height="970" />
+
+## Props
+
+| Name            | Type                                                                                                                                                                                                                                                                                                                                                                                  | Default                             | Description                                                               |
+| --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------- | ------------------------------------------------------------------------- |
+| browseLabel     | `string`                                                                                                                                                                                                                                                                                                                                                                              | `Browse your device`                | String displayed at the bottom next to the Eye icon                       |
+| children        | `ReactElement`                                                                                                                                                                                                                                                                                                                                                                        | -                                   | Element inserted at the bottom of the container                           |
+| dragLabel       | `string`                                                                                                                                                                                                                                                                                                                                                                              | `Drag and drop your documents here` | String displayed in the center of the container                           |
+| files           | `IFile[]` <br/><br/> [`IFile`](https://github.com/Smile-SA/react-front-kit/blob/80ea2bc24c1532f5703e48c4f4c38db753956354/packages/react-front-kit-dropzone/src/Components/Dropzone/Dropzone.tsx#L15C1-L15C1) extends [`FileWithPath`](https://github.com/rtivital/react-dropzone-esm/blob/4bbb571f0d4c01d65025165d891a94c012a468fe/types/react-dropzone.d.ts#L3C1-L3C1)               | `[]`                                | Controlled value of the current files                                     |
+| buttonPlusTitle | `string`                                                                                                                                                                                                                                                                                                                                                                              | `Add button`                        | Tooltip title of top `+` button                                           |
+| onDrop          | `(files: FileWithPath[]) => void` <br/><br/> [`FileWithPath`](https://github.com/rtivital/react-dropzone-esm/blob/4bbb571f0d4c01d65025165d891a94c012a468fe/types/react-dropzone.d.ts#L3C1-L3C1)                                                                                                                                                                                       | -                                   | Called when valid files are dropped into dropzone                         |
+| onRemoveFile    | `(file: IFile) => void` <br/><br/> [`IFile`](https://github.com/Smile-SA/react-front-kit/blob/80ea2bc24c1532f5703e48c4f4c38db753956354/packages/react-front-kit-dropzone/src/Components/Dropzone/Dropzone.tsx#L15C1-L15C1) extends [`FileWithPath`](https://github.com/rtivital/react-dropzone-esm/blob/4bbb571f0d4c01d65025165d891a94c012a468fe/types/react-dropzone.d.ts#L3C1-L3C1) | -                                   | Called when added file is removed by clicking on `x` button               |
+| ...             | -                                                                                                                                                                                                                                                                                                                                                                                     | -                                   | extends [Dropzone props](https://v6.mantine.dev/others/dropzone/?t=props) |

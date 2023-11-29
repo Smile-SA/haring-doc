@@ -3,9 +3,9 @@ import type { ReactElement } from 'react';
 export function GitHubLogo(): ReactElement {
   return (
     <svg
-      height="14"
+      height="16"
       viewBox="0 0 96 96"
-      width="14"
+      width="16"
       xmlns="http://www.w3.org/2000/svg"
     >
       <path

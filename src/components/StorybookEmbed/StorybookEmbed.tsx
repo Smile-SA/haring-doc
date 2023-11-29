@@ -1,6 +1,7 @@
 import type { IframeHTMLAttributes, ReactNode } from 'react';
 
 const frameStyle = {
+  '& > *': { padding: 0 },
   border: '1px solid #aaa',
 };
 const srcBasePath = 'https://smile-sa.github.io/react-front-kit/iframe.html';
