@@ -1,6 +1,3 @@
-import StorybookEmbed from '../../src/components/StorybookEmbed/StorybookEmbed';
-import Description from '../../src/components/Description/Description';
-
 # Collapse Button
 
 <Description
@@ -14,7 +11,7 @@ import Description from '../../src/components/Description/Description';
       link: 'https://v6.mantine.dev/core/collapse/',
     },
   ]}
-  importExample={"import { CollapseButton } from '@smile/react-front-kit';"}
+  importExample="import { CollapseButton } from '@smile/react-front-kit';"
   packageInfo={{
     label: '@smile/react-front-kit',
     link: 'https://www.npmjs.com/package/@smile/react-front-kit',
@@ -36,8 +33,8 @@ A collapsible button with content, combining Mantine's [Button](https://v6.manti
   storyId="3-custom-components-collapsebutton--collapse-button"
   height="210"
 />
-```tsx
 
+```tsx
 import { CollapseButton } from '@smile/react-front-kit';
 
 <CollapseButton
@@ -67,8 +64,8 @@ import { CollapseButton } from '@smile/react-front-kit';
   storyId="3-custom-components-collapsebutton--controlled"
   height="210"
 />
-```tsx
 
+```tsx
 import { CollapseButtonControlled } from '@smile/react-front-kit';
 
 const [opened, setOpened] = useState(true);
@@ -125,11 +122,9 @@ const [opened, setOpened] = useState(true);
 
 Only using `<CollapseButtonControlled>`, extends the uncontrolled `<CollapseButton>` props.
 
-| Name             | Type                     | Default | Description                                                                                                 |
-| ---------------- | ------------------------ | ------- | ----------------------------------------------------------------------------------------------------------- |
-| collapseProps    | `Partial<CollapseProps>` | -       | Passed to the `Collapse`, extends Mantine's [Collapse Props](https://v6.mantine.dev/core/collapse/?t=props) |
-| onCollapseChange | `ElementType`            | -       | Called when the dropdown icon is clicked                                                                    |
-| opened <b>\*</b> | `boolean`                | `false` | Controlled value of `Collapse`, controls of `Collapse` is opened or closed                                  |
-| ...              | -                        | -       | extends uncontrolled `CollapseButton` props                                                                 |
-
-(<b>`*`</b> required prop)
+| Name               | Type                     | Default | Description                                                                                                 |
+| ------------------ | ------------------------ | ------- | ----------------------------------------------------------------------------------------------------------- |
+| collapseProps      | `Partial<CollapseProps>` | -       | Passed to the `Collapse`, extends Mantine's [Collapse Props](https://v6.mantine.dev/core/collapse/?t=props) |
+| onCollapseChange   | `ElementType`            | -       | Called when the dropdown icon is clicked                                                                    |
+| opened <Required/> | `boolean`                | `false` | Controlled value of `Collapse`, controls of `Collapse` is opened or closed                                  |
+| ...                | -                        | -       | extends uncontrolled `CollapseButton` props                                                                 |

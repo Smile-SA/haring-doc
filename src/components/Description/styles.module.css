@@ -40,7 +40,7 @@
 }
 
 .codeBlock {
-  margin: 0;
+  margin: 0 !important;
 }
 
 .codeBlock code {
