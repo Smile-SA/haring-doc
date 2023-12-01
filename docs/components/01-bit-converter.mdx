@@ -1,10 +1,7 @@
-import StorybookEmbed from '../../src/components/StorybookEmbed/StorybookEmbed';
-import Description from '../../src/components/Description/Description';
-
 # Bit Converter
 
 <Description
-  importExample={"import { BitConverter } from '@smile/react-front-kit';"}
+  importExample="import { BitConverter } from '@smile/react-front-kit';"
   packageInfo={{
     label: '@smile/react-front-kit',
     link: 'https://www.npmjs.com/package/@smile/react-front-kit',
@@ -23,9 +20,7 @@ import Description from '../../src/components/Description/Description';
 
 ## Props
 
-| Name            | Type                                                                           | Default | Description                                                                        |
-| --------------- | ------------------------------------------------------------------------------ | ------- | ---------------------------------------------------------------------------------- |
-| options         | [`Options`](https://github.com/sindresorhus/pretty-bytes/blob/main/index.d.ts) | -       | `options` passed to [prettyBytes()](https://github.com/sindresorhus/pretty-bytes)) |
-| value <b>\*</b> | `number`                                                                       | -       | The `number` value to format                                                       |
-
-(<b>`*`</b> required prop)
+| Name              | Type                                                                           | Default | Description                                                                        |
+| ----------------- | ------------------------------------------------------------------------------ | ------- | ---------------------------------------------------------------------------------- |
+| options           | [`Options`](https://github.com/sindresorhus/pretty-bytes/blob/main/index.d.ts) | -       | `options` passed to [prettyBytes()](https://github.com/sindresorhus/pretty-bytes)) |
+| value <Required/> | `number`                                                                       | -       | The `number` value to format                                                       |
