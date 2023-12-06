@@ -1,0 +1,34 @@
+# Confirm Modal
+
+<Description
+  extendsInfo={[{ label: 'Modal', link: 'https://v6.mantine.dev/core/modal/' }]}
+  importExample="import { ConfirmModal } from '@smile/react-front-kit';"
+  packageInfo={{
+    label: '@smile/react-front-kit',
+    link: 'https://www.npmjs.com/package/@smile/react-front-kit',
+  }}
+  sourceInfo={{
+    link: 'https://github.com/Smile-SA/react-front-kit/blob/main/packages/react-front-kit/src/Components/ConfirmModal/ConfirmModal.tsx',
+  }}
+>
+  Renders a Mantine Modal with confirm/cancel buttons and optional title and
+  content
+</Description>
+
+## Storybook Docs
+
+<StorybookEmbed storyId="3-custom-components-confirmmodal--docs" height="910" />
+
+## Props
+
+| Name         | Type           | Default   | Description                                                                  |
+| ------------ | -------------- | --------- | ---------------------------------------------------------------------------- |
+| cancelColor  | `MantineColor` | `gray`    | [MantineColor](https://v6.mantine.dev/theming/colors/) of the cancel button  |
+| cancelLabel  | `string`       | `Cancel`  | Label of the cancel button                                                   |
+| confirmColor | `MantineColor` | `primary` | [MantineColor](https://v6.mantine.dev/theming/colors/) of the confirm button |
+| confirmLabel | `string`       | `Confirm` | Label of the confirm button                                                  |
+| children     | `ReactNode`    | -         | Content displayed below the title                                            |
+| onCancel     | `() => void`   | -         | Called when cancel button is clicked                                         |
+| onConfirm    | `() => void`   | -         | Called when confirm button is clicked                                        |
+| title        | `string`       | -         | Title displayed on top of the modal                                          |
+| ...          | -              | -         | extends [Modal props](https://v6.mantine.dev/core/modal/?t=props)            |

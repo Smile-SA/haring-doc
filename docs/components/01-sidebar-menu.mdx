@@ -11,12 +11,8 @@
     link: 'https://github.com/Smile-SA/react-front-kit/blob/main/packages/react-front-kit/src/Components/SidebarMenu/SidebarMenu.tsx',
   }}
 >
-  Render a list of nested and collapsible menus
+  Renders a list of nested and collapsible menus
 </Description>
-
-## Usage
-
-TODO
 
 ## Storybook Docs
 
@@ -24,4 +20,12 @@ TODO
 
 ## Props
 
-TODO
+| Name                | Type                                                                            | Default | Description                                                                                                                                               |
+| ------------------- | ------------------------------------------------------------------------------- | ------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| collapseButtonProps | `Omit<ICollapseButtonProps, 'opened>`                                           | -       | Props, or function returning props for the [Controlled CollapseButton component](./collapse-button#controlled-1), with the exception of the `opened` prop |
+| defaultSelectedId   | `number \| string`                                                              |         | Default selected menu id, referencing the `id` field of `IMenuItem` in `menu`                                                                             |
+| hasOnlyOneOpenMenu  | `boolean`                                                                       | `false` | Keeps only one menu per level open at once                                                                                                                |
+| menu <Required/>    | `IMenuItem[]`                                                                   | -       | The `IMenuItem` list to be rendered                                                                                                                       |
+| onMenuOpen          | `(id: number \| string, isOpened: boolean, path: (number \| string)[]) => void` |         | Callback fired when menu is opened or closed, `id` and `path` use the `id`s fields of `IMenuItem` in `menu`                                               |
+| openedMenuIds       | `(number \| string)[]`                                                          |         | Controlled state of which menus are currently open, using `id` field of `IMenuItem` in `menu`                                                             |
+| ...                 | -                                                                               | -       | extends [Paper props](https://v6.mantine.dev/core/paper/?t=props)                                                                                         |
