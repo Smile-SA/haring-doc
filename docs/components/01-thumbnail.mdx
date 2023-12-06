@@ -1,26 +1,37 @@
 # Thumbnail
 
 <Description
-  extendsInfo={[{ label: 'Paper', link: 'https://v6.mantine.dev/core/paper/' }]}
-  importExample="import { SidebarMenu } from '@smile/react-front-kit';"
+  importExample="import { Thumbnail } from '@smile/react-front-kit';"
   packageInfo={{
     label: '@smile/react-front-kit',
     link: 'https://www.npmjs.com/package/@smile/react-front-kit',
   }}
   sourceInfo={{
-    link: 'https://github.com/Smile-SA/react-front-kit/blob/main/packages/react-front-kit/src/Components/SidebarMenu/SidebarMenu.tsx',
+    link: 'https://github.com/Smile-SA/react-front-kit/blob/main/packages/react-front-kit/src/Components/Thumbnail/Thumbnail.tsx',
   }}
 >
-  Render a list of nested and collapsible menus
+  Renders a card representing an interactive file or image thumbnail. Contains a
+  filetype icon, title and image, with an actions menu
 </Description>
 
 ## Storybook Docs
 
-<StorybookEmbed storyId="3-custom-components-sidebarmenu--docs" height="1250" />
+<StorybookEmbed storyId="3-custom-components-thumbnail--docs" height="1740" />
 
 ## Props
 
-| Name   | Type | Default | Description                                                     |
-| ------ | ---- | ------- | --------------------------------------------------------------- |
-| author | ``   | -       |                                                                 |
-| ...    | -    | -       | extends [Menu props](https://v6.mantine.dev/core/menu/?t=props) |
+| Name    | Type                                                                       | Default | Description                        |
+| ------- | -------------------------------------------------------------------------- | ------- | ---------------------------------- |
+| actions | [`IAction`](../shared-types/actions#iactiont)[`<IThumbnail>`](#ithumbnail) | -       | Array of actions for the thumbnail |
+| ...     | -                                                                          | -       | extends [IThumbnail](#ithumbnail)  |
+
+### `IThumbnail`
+
+| Attribute      | Type                                 | Description                                 |
+| -------------- | ------------------------------------ | ------------------------------------------- |
+| iconType       | [Icon Map](../shared-types/icon-map) | Icon type of the thumbnail                  |
+| id <Required/> | `number \| string`                   | Id of the thumbnail                         |
+| image          | `string`                             | Image of the thumbnail                      |
+| label          | `string`                             | Label of the thumbnail                      |
+| selected       | `boolean`                            | Highlights the thumbnail as a selected item |
+| onClick        | `() => void`                         | Called when the thumbnail is clicked        |

@@ -1,26 +1,36 @@
 # Responsive Tabs
 
 <Description
-  extendsInfo={[{ label: 'Paper', link: 'https://v6.mantine.dev/core/paper/' }]}
-  importExample="import { SidebarMenu } from '@smile/react-front-kit';"
+  extendsInfo={[
+    {
+      label: 'Tabs',
+      link: 'https://v6.mantine.dev/core/tabs/',
+    },
+  ]}
+  importExample="import { ResponsiveTabs } from '@smile/react-front-kit';"
   packageInfo={{
     label: '@smile/react-front-kit',
     link: 'https://www.npmjs.com/package/@smile/react-front-kit',
   }}
   sourceInfo={{
-    link: 'https://github.com/Smile-SA/react-front-kit/blob/main/packages/react-front-kit/src/Components/SidebarMenu/SidebarMenu.tsx',
+    link: 'https://github.com/Smile-SA/react-front-kit/blob/main/packages/react-front-kit/src/Components/ResponsiveTabs/ResponsiveTabs.tsx',
   }}
 >
-  Render a list of nested and collapsible menus
+  Renders a responsive [Mantine Tabs]('https://v6.mantine.dev/core/tabs/')
+  component that moves overflowing tabs into a dropdown button
 </Description>
 
 ## Storybook Docs
 
-<StorybookEmbed storyId="3-custom-components-sidebarmenu--docs" height="1250" />
+    <StorybookEmbed storyId="3-custom-components-responsivetabs--docs" height="1470"/>
 
 ## Props
 
-| Name   | Type | Default | Description                                                     |
-| ------ | ---- | ------- | --------------------------------------------------------------- |
-| author | ``   | -       |                                                                 |
-| ...    | -    | -       | extends [Menu props](https://v6.mantine.dev/core/menu/?t=props) |
+| Name                    | Type                                                         | Default           | Description                                                                                                                                                          |
+| ----------------------- | ------------------------------------------------------------ | ----------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| children <Required/>    | `ReactNode`                                                  | -                 | Content rendered below the tabs                                                                                                                                      |
+| tabs <Required/>        | `ReactElement<HTMLButtonElement>[]`                          | -                 | Array of `<Tabs.Tab>` components, see [Tabs Usage](https://v6.mantine.dev/core/tabs/)                                                                                |
+| dropdownButtonAriaLabel | `string`                                                     | `Overflow Button` | Aria label of the dropdown button                                                                                                                                    |
+| dropdownButtonProps     | [`ButtonProps`](https://v6.mantine.dev/core/button/?t=props) | -                 | Props for the [Mantine Button](https://v6.mantine.dev/core/button/?t=props) component                                                                                |
+| tabsListProps           | [`TabsListProps`](https://v6.mantine.dev/core/tabs/?t=props) | -                 | Props for the [Mantine Tabs.List](https://v6.mantine.dev/core/tabs/?t=props#tabslist-component-props) component, see [Tabs Usage](https://v6.mantine.dev/core/tabs/) |
+| ...                     | -                                                            | -                 | extends [Tabs props](https://v6.mantine.dev/core/tabs/?t=props)                                                                                                      |
