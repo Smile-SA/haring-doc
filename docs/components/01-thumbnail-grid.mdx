@@ -16,8 +16,8 @@
     link: 'https://github.com/Smile-SA/react-front-kit/blob/main/packages/react-front-kit/src/Components/ThumbnailGrid/ThumbnailGrid.tsx',
   }}
 >
-  Renders a grid of [`Thumbnails`]('./thumbnail') with an
-  [`ActionBar`]('./action-bar') displaying mass actions on selected thumbnails
+  Renders a grid of [`Thumbnails`](./thumbnail) with an
+  [`ActionBar`](./action-bar) displaying mass actions on selected thumbnails
 </Description>
 
 ## Storybook Docs
@@ -29,11 +29,10 @@
 
 ## Props
 
-| Name                   | Type | Default | Description                                                                  |
-| ---------------------- | ---- | ------- | ---------------------------------------------------------------------------- |
-| thumbnails <Required/> | ``   | -       |                                                                              |
-| gridActions            | ``   | -       |                                                                              |
-| selectedElementsText   | ``   | -       |                                                                              |
-| thumbnailActions       | ``   | -       |                                                                              |
-| onThumbnailClick       | ``   | -       |                                                                              |
-| ...                    | -    | -       | extends [SimpleGrid props](https://v6.mantine.dev/core/simple-grid/?t=props) |
+| Name                   | Type                                                                      | Default                                                                                                                                      | Description                                                                                            |
+| ---------------------- | ------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------ |
+| thumbnails <Required/> | [`IThumbnail[]`](./thumbnail#ithumbnail)                                  | -                                                                                                                                            | Array of objects to render as [`<Thumbnail>`](./thumbnail) in the grid                                 |
+| actions                | [`IThumbnailAction[]`](./thumbnail#ithumbnailaction)                      | Array of [`IAction`](../shared-types/actions/iactiont) for individual thumbnails or mass action shown on the top [`ActionBar`](./action-bar) |
+| selectedElementsText   | `(numberOfSelectedElements: number) => string`                            | ``(n: number) => `${n} selected file${n > 1 ? 's' : ''}` ``                                                                                  | Function used to generate the string shown in the [`ActionBar`](./action-bar), when items are selected |
+| onThumbnailClick       | `(item: `[`IThumbnail`](./thumbnail#ithumbnail)`, index: number) => void` | -                                                                                                                                            | Called when a [`<Thumbnail>`](./thumbnail) is clicked                                                  |
+| ...                    | -                                                                         | -                                                                                                                                            | extends [SimpleGrid props](https://v6.mantine.dev/core/simple-grid/?t=props)                           |

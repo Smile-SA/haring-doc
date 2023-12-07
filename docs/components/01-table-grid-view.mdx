@@ -35,13 +35,14 @@ import Description from '../../src/components/Description/Description';
 
 ## Props
 
-| Name                  | Type                                                  | Default | Description                                                                                                                  |
-| --------------------- | ----------------------------------------------------- | ------- | ---------------------------------------------------------------------------------------------------------------------------- |
-| data <Required/>      | `Record<string, unknown>[]`                           | -       | Array of data objects, loaded in both views                                                                                  |
-| gridProps <Required/> | [`ITableGridViewGridProps`](#itablegridviewgridprops) | -       | Props for the grid view, field mapping values are used to convert any data object in `data` into [`Thumbnails`](./thumbnail) |
-| tableProp <Required/> | [`Omit<ITablePropsData, 'data'>`](./table#props)      | -       | Props for the table view, omitting `data`                                                                                    |
-| defaultView           | `'grid' \| 'table'`                                   | -       | Data view that will be active by default, either `grid` or `table`                                                           |
-| ...                   | -                                                     | -       | Extends [SwitchableView props](./switchable-view#props), omitting `views`                                                    |
+| Name                  | Type                                                                                                                                                                     | Default | Description                                                                                                                  |
+| --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------- | ---------------------------------------------------------------------------------------------------------------------------- |
+| data <Required/>      | `Record<string, unknown>[]`                                                                                                                                              | -       | Array of data objects, loaded in both views                                                                                  |
+| gridProps <Required/> | [`ITableGridViewGridProps`](#itablegridviewgridprops)                                                                                                                    | -       | Props for the grid view, field mapping values are used to convert any data object in `data` into [`Thumbnails`](./thumbnail) |
+| tableProp <Required/> | [`Omit<ITablePropsData, 'data'>`](./table#props)                                                                                                                         | -       | Props for the table view, omitting `data`                                                                                    |
+| actions               | [`IAction`](../shared-types/actions/iactiont)`<`[`ITableData`](./table#itabledatadata-extends-recordstring-unknown)`\|`[`IThumbnailData`](./thumbnail#ithumbnaildata)`>` | -       | Array of actions for both views, either individual row/thumbnail or mass actions                                             |
+| defaultView           | `'grid' \| 'table'`                                                                                                                                                      | -       | Data view that will be active by default, either `grid` or `table`                                                           |
+| ...                   | -                                                                                                                                                                        | -       | Extends [SwitchableView props](./switchable-view#props), omitting `views`                                                    |
 
 ### `ITableGridViewGridProps`
 
