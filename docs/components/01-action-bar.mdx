@@ -1,0 +1,38 @@
+# Action Bar
+
+<Description
+  extendsInfo={[
+    {
+      label: 'Group',
+      link: 'https://v6.mantine.dev/core/group/',
+    },
+  ]}
+  importExample="import { ActionBar } from '@smile/react-front-kit';"
+  packageInfo={{
+    label: '@smile/react-front-kit',
+    link: 'https://www.npmjs.com/package/@smile/react-front-kit',
+  }}
+  sourceInfo={{
+    link: 'https://github.com/Smile-SA/react-front-kit/blob/main/packages/react-front-kit/src/Components/ActionBar/ActionBar.tsx',
+  }}
+>
+  Renders a horizontal bar displaying the number of selected elements and an
+  array of [`IAction`s](../shared-types/actions#iactiont) as
+  [ActionIcons](https://v6.mantine.dev/core/action-icon/)
+</Description>
+
+## Storybook Docs
+
+<StorybookEmbed storyId="3-custom-components-actionbar--docs" height="820" />
+
+## Props
+
+ActionBar takes a `<Data>` generic type that extends `Record<string, unknown>`.
+
+| Name                              | Type                                                           | Default                                                                   | Description                                                                                                                                                                         |
+| --------------------------------- | -------------------------------------------------------------- | ------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| selectedElements <Required/>      | `Data[]`                                                       | -                                                                         | Array of currently selected elements, necessary for the `actions` to be able to pass those elements along                                                                           |
+| selectedElementsLabel <Required/> | `(selectedElements: number) => string`                         | ``(selectedElements: number) => `${selectedElements} file(s) selected` `` | Function used to generate the string that displays how many elements are currently selected, it gives the current number of elements in the `selectedElements` array as a parameter |
+| actions                           | [`IAction`](./thumbnail#ithumbnailaction) `<Data \| Data[]>[]` | -                                                                         | Array of [`IAction`](../shared-types/actions/iactiont) for mass action shown in the bar                                                                                             |
+| modalProps                        | [`IThumbnailAction[]`](./thumbnail#ithumbnailaction)           | -                                                                         | Extra props passed to the internal [Mantine Modal](https://v6.mantine.dev/core/modal/) component, used for actions with confirmation enabled                                        |
+| ...                               | -                                                              | -                                                                         | extends [Group props](https://v6.mantine.dev/core/group/?t=props)                                                                                                                   |
