@@ -1,0 +1,40 @@
+# Selectable List
+
+<Description
+  extendsInfo={[
+    {
+      label: 'Stack',
+      link: 'https://v6.mantine.dev/core/stack/',
+    },
+  ]}
+  importExample="import { SelectableList } from '@smile/react-front-kit';"
+  packageInfo={{
+    label: '@smile/react-front-kit',
+    link: 'https://www.npmjs.com/package/@smile/react-front-kit',
+  }}
+  sourceInfo={{
+    link: 'https://github.com/Smile-SA/react-front-kit/blob/main/packages/react-front-kit/src/Components/SelectableList/SelectableList.tsx',
+  }}
+>
+  Renders a vertical list of arbitrary elements, adding a selection checkbox to
+  each row. A controlled array of index values determines which row is currently
+  selected
+</Description>
+
+## Storybook Docs
+
+<StorybookEmbed
+  storyId="3-custom-components-selectablelist--docs"
+  height="1380"
+/>
+
+## Props
+
+ActionBar takes a `<Data>` generic type that extends `Record<string, unknown>`.
+
+| Name            | Type                                           | Default | Description                                                                                 |
+| --------------- | ---------------------------------------------- | ------- | ------------------------------------------------------------------------------------------- |
+| children        | `ReactElement[]`                               | -       | Arbitrary array of `ReactElement`s to display as a vertical list                            |
+| selectedIndexes | `number[]`                                     | `[]`    | Controlled array of index values, determines which element in the list is shown as selected |
+| onSelectChange  | `(index: number, isSelected: boolean) => void` | -       | Called when an element is selected                                                          |
+| ...             | -                                              | -       | extends [Stack props](https://v6.mantine.dev/core/stack/?t=props)                           |

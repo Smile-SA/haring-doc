@@ -1,0 +1,39 @@
+# Search Bar
+
+<Description
+  extendsInfo={[
+    {
+      label: 'TextInput',
+      link: 'https://v6.mantine.dev/core/text-input/',
+    },
+  ]}
+  importExample="import { SearchBar } from '@smile/react-front-kit';"
+  packageInfo={{
+    label: '@smile/react-front-kit',
+    link: 'https://www.npmjs.com/package/@smile/react-front-kit',
+  }}
+  sourceInfo={{
+    link: 'https://github.com/Smile-SA/react-front-kit/blob/main/packages/react-front-kit/src/Components/SearchBar/SearchBar.tsx',
+  }}
+>
+  Render a search bar with controlled search input, clear button and optional
+  left section
+</Description>
+
+## Storybook Docs
+
+<StorybookEmbed storyId="3-custom-components-searchbar--docs" height="860" />
+
+## Props
+
+| Name                 | Type                         | Default  | Description                                                                                                                                          |
+| -------------------- | ---------------------------- | -------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
+| clearButtonAriaLabel | `string`                     | `Clear`  | Aria label of clear button                                                                                                                           |
+| inputAriaLabel       | `string`                     | `Search` | Aria label of input                                                                                                                                  |
+| leftSection          | `ReactNode`                  | -        | left section content                                                                                                                                 |
+| onChange             | `(value: string) => void`    | -        | Called when input changes                                                                                                                            |
+| onSearchClear        | `() => void`                 | -        | Called when clear button is clicked                                                                                                                  |
+| onSearchSubmit       | `(event: FormEvent) => void` | -        | Called when input is submitted                                                                                                                       |
+| opened               | `boolean`                    | -        | Controlled value that represents whether or not the SearchBar is considered active/visible and activates focus (does not actually affect visibility) |
+| value                | `string`                     | -        | Controlled value of input                                                                                                                            |
+| ...                  | -                            | -        | Extends [TextInput](https://v6.mantine.dev/core/text-input/?t=props)                                                                                 |

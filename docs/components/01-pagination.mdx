@@ -1,0 +1,38 @@
+# Pagination
+
+<Description
+  extendsInfo={[{ label: 'Flex', link: 'https://v6.mantine.dev/core/flex/' }]}
+  importExample="import { Pagination } from '@smile/react-front-kit';"
+  packageInfo={{
+    label: '@smile/react-front-kit',
+    link: 'https://www.npmjs.com/package/@smile/react-front-kit',
+  }}
+  sourceInfo={{
+    link: 'https://github.com/Smile-SA/react-front-kit/blob/main/packages/react-front-kit/src/Components/Pagination/Pagination.tsx',
+  }}
+>
+  Renders a Controlled [Mantine
+  Pagination](https://v6.mantine.dev/core/pagination/) component next to a
+  select controlling the number of displayed items per page, inside a
+  [Flex](https://v6.mantine.dev/core/flex/)
+</Description>
+
+## Storybook Docs
+
+<StorybookEmbed storyId="3-custom-components-pagination--docs" height="1090" />
+
+## Props
+
+| Name                     | Type                                                                 | Default | Description                                                                            |
+| ------------------------ | -------------------------------------------------------------------- | ------- | -------------------------------------------------------------------------------------- |
+| page <Required/>         | `number`                                                             | -       | Controlled value of the current page                                                   |
+| totalPages <Required/>   | `number`                                                             | -       | Total number of pages                                                                  |
+| itemsPerPage <Required/> | `number`                                                             | -       | Controlled value of the items per page Select                                          |
+| itemsPerPageAriaLabel    | `string`                                                             | -       | Aria label of the items per page Select                                                |
+| itemsPerPageOptions      | [`IOptions<number>`](../shared-types/i-options)                      | `[]`    | Array of options for the items per page Select                                         |
+| isTransparent            | `boolean`                                                            | `false` | Displays a background behind the component                                             |
+| onItemsPerPageChange     | `(value: number) => void`                                            | -       | Called when Select is changed                                                          |
+| onPageChange             | `(value: number) => void`                                            | -       | Called when Pagination page is changed                                                 |
+| paginationProps          | [`PaginationProps`](https://v6.mantine.dev/core/pagination/?t=props) | -       | Props for the [`Mantine Pagination`](https://v6.mantine.dev/core/pagination) component |
+| selectProps              | [`SelectProps`](https://v6.mantine.dev/core/select/?t=props)         | -       | Props for the [`Mantine Select`](https://v6.mantine.dev/core/select/) component        |
+| ...                      | -                                                                    | -       | extends [Flex props](https://v6.mantine.dev/core/flex/?t=props)                        |

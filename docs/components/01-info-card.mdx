@@ -1,0 +1,43 @@
+# Info Card
+
+<Description
+  extendsInfo={[{ label: 'Paper', link: 'https://v6.mantine.dev/core/paper/' }]}
+  importExample="import { InfoCard } from '@smile/react-front-kit';"
+  packageInfo={{
+    label: '@smile/react-front-kit',
+    link: 'https://www.npmjs.com/package/@smile/react-front-kit',
+  }}
+  sourceInfo={{
+    link: 'https://github.com/Smile-SA/react-front-kit/blob/main/packages/react-front-kit/src/Components/InfoCard/InfoCard.tsx',
+  }}
+>
+  Render a card with title, content, content blocks and background motif
+</Description>
+
+## Storybook Docs
+
+<StorybookEmbed storyId="3-custom-components-infocard--docs" height="1710" />
+
+## Props
+
+| Name                | Type                              | Default       | Description                                                       |
+| ------------------- | --------------------------------- | ------------- | ----------------------------------------------------------------- |
+| children            | `ReactElement`                    | -             | Content of the right section                                      |
+| content             | `ReactElement`                    | -             | Content at the bottom of the left section                         |
+| contentItems        | [`IContentItem[]`](#icontentitem) | `[]`          | Array of content blocks, main content of the left section         |
+| title               | `ReactElement`                    | -             | Title of the card                                                 |
+| motif               | `ReactElement`                    | Default Motif | Background motif of the card                                      |
+| leftContainerStyle  | `CSSProperties`                   | -             | CSS style of the left section                                     |
+| rightContainerStyle | `CSSProperties`                   | -             | CSS style of the right section                                    |
+| ...                 | -                                 | -             | extends [Paper props](https://v6.mantine.dev/core/paper/?t=props) |
+
+### `IContentItem`
+
+Represents a block of content inside the card.
+
+| Attribute | Type                           | Description                                                                    |
+| --------- | ------------------------------ | ------------------------------------------------------------------------------ |
+| icon      | `ReactElement`                 | [`ActionIcon`](https://v6.mantine.dev/core/action-icon/) of content            |
+| iconProps | `Partial<ActionIconProps>`     | Props for the [`ActionIcon`](https://v6.mantine.dev/core/action-icon/?t=props) |
+| label     | `string`                       | text of content                                                                |
+| onAction  | `(item: IContentItem) => void` | Called when content is clicked                                                 |
