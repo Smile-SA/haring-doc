@@ -20,7 +20,7 @@ import StorybookEmbed from '../../src/components/StorybookEmbed/StorybookEmbed';
     link: 'https://github.com/Smile-SA/react-front-kit/blob/main/packages/react-front-kit/src/Components/DocumentList/DocumentList.tsx',
   }}
 >
-  Renders a vertical and selectable list of [DocumentCards](./DocumentCard),
+  Renders a vertical and selectable list of [DocumentCards](./document-card),
   with an [ActionBar](./action-bar)
 </Description>
 
@@ -46,12 +46,12 @@ import StorybookEmbed from '../../src/components/StorybookEmbed/StorybookEmbed';
 
 A data object that will be rendered as a [DocumentCard](./document-card) in the list
 
-| Attribute      | Type                             | Description                                                                                    |
-| -------------- | -------------------------------- | ---------------------------------------------------------------------------------------------- |
-| id <Required/> | `number \| string`               | Internal ID of the object, not displayed                                                       |
-| author         | `string`                         | Text displayed as the author of the document                                                   |
-| content        | `ReactNode`                      | Main content displayed in the document card                                                    |
-| date           | `string`                         | Text displayed as the date of the document                                                     |
-| iconType       | `[`IconMap`](../types/icon-map)` | Icon indicating the filetype of the document, one of the [`IconMap`](../types/icon-map) values |
-| path           | `string`                         | Text displayed as the path of the document                                                     |
-| title          | `string`                         | Text displayed as the title of the document                                                    |
+| Attribute      | Type                                    | Description                                                                                           |
+| -------------- | --------------------------------------- | ----------------------------------------------------------------------------------------------------- |
+| id <Required/> | `number \| string`                      | Internal ID of the object, not displayed                                                              |
+| author         | `string`                                | Text displayed as the author of the document                                                          |
+| content        | `ReactNode`                             | Main content displayed in the document card                                                           |
+| date           | `string`                                | Text displayed as the date of the document                                                            |
+| iconType       | `[`IconMap`](../shared-types/icon-map)` | Icon indicating the filetype of the document, one of the [`IconMap`](../shared-types/icon-map) values |
+| path           | `string`                                | Text displayed as the path of the document                                                            |
+| title          | `string`                                | Text displayed as the title of the document                                                           |
