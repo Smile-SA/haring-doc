@@ -32,13 +32,13 @@ import Description from '../../src/components/Description/Description';
 
 ## Props
 
-| Name            | Type                                              | Default         | Description                                                                                                                                                           |
-| --------------- | ------------------------------------------------- | --------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| actions         | [`ITableAction`](#itableaction)                   | `[]`            | Array of [`IAction`](../shared-types/actions#iactiont)s for the table                                                                                                 |
-| menuLabel       | `string`                                          | `Other actions` | Tooltip label of the "`...`" extra actions menu                                                                                                                       |
-| paginationProps | [`Partial<IPaginationProps>`](./pagination#props) | -               | Props of [Pagination](./pagination#props) component                                                                                                                   |
-| rowActionNumber | `number`                                          | `0`             | Index that determines where the row `actions` array in the actions column is sliced, all actions after this index will be moved inside the "`...`" extra actions menu |
-| ...             | -                                                 | -               | extends [MRT_TableOptions props](https://www.mantine-react-table.com/docs/api/table-options)                                                                          |
+| Name            | Type                                              | Default           | Description                                                                                                                                                           |
+| --------------- | ------------------------------------------------- | ----------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| actions         | [`ITableAction`](#itableaction)                   | `[]`              | Array of [`IAction`](../shared-types/actions#iactiont)s for the table                                                                                                 |
+| menuLabel       | `string`                                          | `"Other actions"` | Tooltip label of the "`...`" extra actions menu                                                                                                                       |
+| paginationProps | [`Partial<IPaginationProps>`](./pagination#props) | -                 | Props of [Pagination](./pagination#props) component                                                                                                                   |
+| rowActionNumber | `number`                                          | `0`               | Index that determines where the row `actions` array in the actions column is sliced, all actions after this index will be moved inside the "`...`" extra actions menu |
+| ...             | -                                                 | -                 | extends [MRT_TableOptions props](https://www.mantine-react-table.com/docs/api/table-options)                                                                          |
 
 ### `ITableData<Data extends Record<string, unknown>`
 
