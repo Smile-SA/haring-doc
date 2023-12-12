@@ -24,7 +24,7 @@
 | -------------------------- | -------------------------------------------------------- | ------------------ | --------------------------------------------------- |
 | activeFilters              | [`ISidebarFilter[]`](#isidebarfilter)                    | `[]`               | Array of active filter values                       |
 | defaultOpenedActiveFilters | `booleane`                                               | `true`             | Define if collapse of active filters tags is opened |
-| defaultOpenedMenuIds       | `IId[]`                                                  | `[]`               | Default collapse menu opened                        |
+| defaultOpenedMenuIds       | `number \| string`                                       | `[]`               | Default collapse menu opened                        |
 | deleteButtonLabel          | `string`                                                 | `"Remove all"`     | Label of button that removes all active filters     |
 | filterButtonLabel          | `string`                                                 | `"Filter"`         | Label of submit button                              |
 | menus                      | [`IFiltersItem<string \| number>[]`](#ifiltersitem)      | `[]`               | Array of nested menus containing filters            |
@@ -46,14 +46,8 @@
 
 | Attribute  | Type                               | Description                       |
 | ---------- | ---------------------------------- | --------------------------------- |
-| categoryId | `IId[]`                            | Array of parents ids in the menus |
+| categoryId | `(number \| string)[]`             | Array of parents ids in the menus |
 | id         | `number \| string`                 | Nested array of menus             |
 | label      | `string`                           | Filter(s) contained in the menu   |
 | onRemove   | `(filter: ISidebarFilter) => void` | Filter(s) contained in the menu   |
 | value      | `unknown`                          | Filter(s) contained in the menu   |
-
-### `IId`
-
-| type               |
-| ------------------ |
-| `number \| string` |
