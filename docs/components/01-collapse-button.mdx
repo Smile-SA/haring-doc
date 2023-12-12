@@ -103,20 +103,20 @@ const [opened, setOpened] = useState(true);
 
 ### Uncontrolled
 
-| Name           | Type                              | Default  | Description                                                                                                                                                 |
-| -------------- | --------------------------------- | -------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| children       | `ReactNode`                       | -        | Content either collapsed or opened under Button                                                                                                             |
-| component      | `ElementType`                     | `button` | Custom component to use around the label                                                                                                                    |
-| componentProps | `ComponentPropsWithoutRef`        | -        | Additional props for the custom `component`                                                                                                                 |
-| defaultOpened  | `boolean`                         | `false`  | Initial value of the `Collapse`, controls if initially opened or closed                                                                                     |
-| id             | `number \| string`                | -        | Optional ID given when `onSelect` is called                                                                                                                 |
-| isOpenOnSelect | `boolean`                         | `true`   | When `true`, clicking/selecting anywhere on the button will also open the`Collapse`. When `false`, only clicking the collapse icon will open the `Collapse` |
-| label          | `ReactNode`                       | -        | `Button` label                                                                                                                                              |
-| level          | `number`                          | `0`      | Used in nested menus such as [SidebarMenu](./sidebar-menu), levels `0`, `1` and `2` have slightly different styles                                          |
-| line           | `boolean`                         | `false`  | Used in nested menus such as [SidebarMenu](./sidebar-menu), when `true` will display a vertical line to the left of the button                              |
-| onSelect       | `(id?: number \| string) => void` | -        | Called when button is selected (does not include the collapse icon)                                                                                         |
-| selected       | `boolean`                         | -        | Controlled value determining if the button is selected, affects the button style                                                                            |
-| ...            | -                                 | -        | extends [Button props](https://v6.mantine.dev/core/button/?t=props)                                                                                         |
+| Name           | Type                              | Default    | Description                                                                                                                                                               |
+| -------------- | --------------------------------- | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| children       | `ReactNode`                       | -          | Content either collapsed or opened under Button                                                                                                                           |
+| component      | `ElementType`                     | `button`   | Custom component to use around the label                                                                                                                                  |
+| componentProps | `ComponentPropsWithoutRef`        | -          | Additional props for the custom `component`                                                                                                                               |
+| defaultOpened  | `boolean`                         | `false`    | Initial value of the `Collapse`, controls if initially opened or closed                                                                                                   |
+| id             | `number \| string`                | -          | Optional ID given when `onSelect` is called                                                                                                                               |
+| isOpenOnSelect | `boolean`                         | `true`     | When `true`, clicking/selecting anywhere on the button will also open the`Collapse`. When `false`, only clicking the collapse icon will open the `Collapse`               |
+| label          | `ReactNode`                       | -          | `Button` label                                                                                                                                                            |
+| level          | `number`                          | `0`        | Used in nested menus such as [SidebarMenu](./sidebar-menu), levels `0`, `1` and `2` have slightly different styles                                                        |
+| line           | `"simple" \| "line"`              | `"simple"` | Used in nested menus such as [SidebarMenu](./sidebar-menu), when `"line"` will display a vertical line to the left of the button. When `"simple"` same thing without line |
+| onSelect       | `(id?: number \| string) => void` | -          | Called when button is selected (does not include the collapse icon)                                                                                                       |
+| selected       | `boolean`                         | -          | Controlled value determining if the button is selected, affects the button style                                                                                          |
+| ...            | -                                 | -          | extends [Button props](https://v6.mantine.dev/core/button/?t=props)                                                                                                       |
 
 ### Controlled
 
