@@ -89,6 +89,14 @@ const config: Config = {
               label: 'Components',
               to: '/docs/category/components',
             },
+            {
+              label: 'Layouts',
+              to: '/docs/category/layouts',
+            },
+            {
+              label: 'Shared Types',
+              to: '/docs/category/shared-types',
+            },
           ],
         },
         {
