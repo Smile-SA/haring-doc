@@ -20,16 +20,18 @@
 
 ## Props
 
-| Name                | Type                              | Default       | Description                                                       |
-| ------------------- | --------------------------------- | ------------- | ----------------------------------------------------------------- |
-| children            | `ReactElement`                    | -             | Content of the right section                                      |
-| content             | `ReactElement`                    | -             | Content at the bottom of the left section                         |
-| contentItems        | [`IContentItem[]`](#icontentitem) | `[]`          | Array of content blocks, main content of the left section         |
-| title               | `ReactElement`                    | -             | Title of the card                                                 |
-| motif               | `ReactElement`                    | Default Motif | Background motif of the card                                      |
-| leftContainerStyle  | `CSSProperties`                   | -             | CSS style of the left section                                     |
-| rightContainerStyle | `CSSProperties`                   | -             | CSS style of the right section                                    |
-| ...                 | -                                 | -             | extends [Paper props](https://v6.mantine.dev/core/paper/?t=props) |
+| Name                 | Type                              | Default       | Description                                                       |
+| -------------------- | --------------------------------- | ------------- | ----------------------------------------------------------------- |
+| children             | `ReactElement`                    | -             | Content of the right section                                      |
+| collapse             | `Boolean`                         | `true`        | Active or not collapse function                                   |
+| content              | `ReactElement`                    | -             | Content at the bottom of the left section                         |
+| contentItems         | [`IContentItem[]`](#icontentitem) | `[]`          | Array of content blocks, main content of the left section         |
+| title                | `ReactElement`                    | -             | Title of the card                                                 |
+| motif                | `ReactElement`                    | Default Motif | Background motif of the card                                      |
+| leftContainerStyle   | `CSSProperties`                   | -             | CSS style of the left section                                     |
+| responsiveBreakpoint | `"xs" \| "sm" \| "md" \| "lg" `   | `"sm"`        | Breackpoint of mobile display based from mantine theme            |
+| rightContainerStyle  | `CSSProperties`                   | -             | CSS style of the right section                                    |
+| ...                  | -                                 | -             | extends [Paper props](https://v6.mantine.dev/core/paper/?t=props) |
 
 ### `IContentItem`
 
