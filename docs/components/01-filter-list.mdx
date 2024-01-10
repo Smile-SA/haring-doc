@@ -1,0 +1,62 @@
+# Filter List
+
+<Description
+  extendsInfo={[
+    {
+      label: 'Stack',
+      link: 'https://v6.mantine.dev/core/stack/',
+    },
+    {
+      label: 'Container',
+      link: 'https://v6.mantine.dev/core/container/',
+    },
+    {
+      label: 'Modal',
+      link: 'https://v6.mantine.dev/core/modal/',
+    },
+    {
+      label: 'SearchableCheckboxList',
+      link: 'https://smile-sa.github.io/react-front-kit/?path=/docs/3-custom-components-searchablecheckboxlist--docs',
+    },
+  ]}
+  importExample="import { FilterList } from '@smile/react-front-kit';"
+  packageInfo={{
+    label: '@smile/react-front-kit',
+    link: 'https://www.npmjs.com/package/@smile/react-front-kit',
+  }}
+  sourceInfo={{
+    link: 'https://github.com/Smile-SA/react-front-kit/blob/main/packages/react-front-kit/src/Components/FilterList/FilterList.tsx',
+  }}
+>
+  Renders a list of filters with text inputs and a manage filters button which
+  displays the component
+  [SearchableCheckboxList](../components/searchable-checkbox-list)
+</Description>
+
+## Storybook Docs
+
+<StorybookEmbed storyId="3-custom-components-filterlist--docs" height="1600" />
+
+## Props
+
+| Name                               | Type                                   | Default               | Description                                                           |
+| ---------------------------------- | -------------------------------------- | --------------------- | --------------------------------------------------------------------- |
+| filters <Required/>                | `IFilter[]                             | -                     | Array of filters                                                      |
+| onActiveFiltersChange              | `((filters: IFilter[]) => void)`       | -                     | Callback function called when the `confirm change` button is clicked. |
+| onSubmit                           | `((activeFilters: IFilter[]) => void)` | -                     | Callback function called when the `submit` button is clicked.         |
+| direction                          | `"row" \| "column"`                    | `"row"`               | Display orientation                                                   |
+| filtersManageLabel                 | `"string"`                             | `"Manage filters"`    | Label of filters manage button                                        |
+| manageFilterModalSearchPlaceholder | `"string"`                             | `"Search in filters"` | Placeholder of filter modal search                                    |
+| manageFilterModalSearchSubmit      | `"string"`                             | `"Confirm changes"`   | Label of confirm change button in modal                               |
+| manageFilterModalTitle             | `"string"`                             | `"Manage filters"`    | Title of manage filter modal                                          |
+| modalProps                         | `ModalProps`                           | -                     | Props of [Modal](https://v6.mantine.dev/core/modal/) component        |
+| submitLabel                        | `string`                               | `"Filter"`            | Submit button label                                                   |
+
+### `IFilter`
+
+| Attribute         | Type               | Description                |
+| ----------------- | ------------------ | -------------------------- |
+| active            | `boolean`          | Define if filter is active |
+| component         | `ReactElement`     | component element          |
+| id <required/>    | `number \| string` | identifier                 |
+| label <required/> | `string`           | Label value                |

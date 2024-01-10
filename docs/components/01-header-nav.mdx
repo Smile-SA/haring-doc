@@ -1,0 +1,45 @@
+# Header Nav
+
+<Description
+  extendsInfo={[
+    {
+      label: 'NavLink',
+      link: 'https://v6.mantine.dev/core/nav-link/',
+    },
+    {
+      label: 'SidebarMenu',
+      link: 'https://smile-sa.github.io/react-front-kit/?path=/docs/3-custom-components-sidebarmenu--docs',
+    },
+  ]}
+  importExample="import { HeaderNav } from '@smile/react-front-kit';"
+  packageInfo={{
+    label: '@smile/react-front-kit',
+    link: 'https://www.npmjs.com/package/@smile/react-front-kit',
+  }}
+  sourceInfo={{
+    link: 'https://github.com/Smile-SA/react-front-kit/blob/main/packages/react-front-kit/src/Components/HeaderNav/HeaderNav.tsx',
+  }}
+>
+  Render a navigation for header
+</Description>
+
+## Storybook Docs
+
+<StorybookEmbed storyId="3-custom-components-headernav--docs" height="1210" />
+
+## Props
+
+| Name              | Type                  | Default | Description                               |
+| ----------------- | --------------------- | ------- | ----------------------------------------- |
+| menus <required/> | `IHeaderNavMenu<T>[]` | -       | Array of element of type `IHeaderNavMenu` |
+| isMobile          | `boolean`             | `false` | Define display for mobile or computer     |
+| navLinkComponent  | `ElementType`         | `"a"`   | Define balise type of navLink             |
+
+## IHeaderNavMenu
+
+`IHeaderNavMenu` has a generic `T` that extend of `number | string` and it extend of `IMenuItem<T>`
+
+| Name     | Type                  | Description                         |
+| -------- | --------------------- | ----------------------------------- |
+| children | `IHeaderNavMenu<T>[]` | Item array of type `IHeaderNavMenu` |
+| url      | `string`              | Source url                          |
