@@ -1,0 +1,48 @@
+# Searchable Checkbox List
+
+<Description
+  extendsInfo={[
+    {
+      label: 'Input',
+      link: 'https://v6.mantine.dev/core/input/',
+    },
+    {
+      label: 'Checkbox',
+      link: 'https://v6.mantine.dev/core/checkbox/',
+    },
+  ]}
+  importExample="import { searchablecheckboxlist } from '@smile/react-front-kit';"
+  packageInfo={{
+    label: '@smile/react-front-kit',
+    link: 'https://www.npmjs.com/package/@smile/react-front-kit',
+  }}
+  sourceInfo={{
+    link: 'https://github.com/Smile-SA/react-front-kit/blob/main/packages/react-front-kit/src/Components/SearchableCheckboxList/SearchableCheckboxList.tsx',
+  }}
+>
+  Renders a search bar with checkboxes and a validation button
+</Description>
+
+## Storybook Docs
+
+<StorybookEmbed
+  storyId="3-custom-components-searchablecheckboxlist--docs"
+  height="820"
+/>
+
+## Props
+
+| Name          | Type                          | Default               | Description                           |
+| ------------- | ----------------------------- | --------------------- | ------------------------------------- |
+| checkboxes    | `T[]`                         | -                     | Array of Checkbox                     |
+| buttonLabel   | `string`                      | `"Validate changes"`  | Array of Checkbox                     |
+| onClickButton | `((checkboxes: T[]) => void)` | -                     | Callback function of button `onClick` |
+| placeholder   | `string`                      | `"Search in options"` | Array of Checkbox                     |
+
+## ICheckbox
+
+| Attribute          | Type               | Description    |
+| ------------------ | ------------------ | -------------- |
+| active             | `boolean`          | Checked or not |
+| id <Required/>     | `number \| string` | id of checkbox |
+| label: <Required/> | 'string'           | value of label |
