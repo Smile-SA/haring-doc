@@ -1,16 +1,6 @@
 # Header Nav
 
 <Description
-  extendsInfo={[
-    {
-      label: 'NavLink',
-      link: 'https://v6.mantine.dev/core/nav-link/',
-    },
-    {
-      label: 'SidebarMenu',
-      link: 'https://smile-sa.github.io/react-front-kit/?path=/docs/3-custom-components-sidebarmenu--docs',
-    },
-  ]}
   importExample="import { HeaderNav } from '@smile/react-front-kit';"
   packageInfo={{
     label: '@smile/react-front-kit',
@@ -20,7 +10,8 @@
     link: 'https://github.com/Smile-SA/react-front-kit/blob/main/packages/react-front-kit/src/Components/HeaderNav/HeaderNav.tsx',
   }}
 >
-  Render a navigation for header
+  Renders a list of menus as either a horizontal list of NavLink components or a
+  vertical SidebarMenu in mobile mode
 </Description>
 
 ## Storybook Docs
@@ -29,17 +20,17 @@
 
 ## Props
 
-| Name              | Type                  | Default | Description                               |
-| ----------------- | --------------------- | ------- | ----------------------------------------- |
-| menus <required/> | `IHeaderNavMenu<T>[]` | -       | Array of element of type `IHeaderNavMenu` |
-| isMobile          | `boolean`             | `false` | Define display for mobile or computer     |
-| navLinkComponent  | `ElementType`         | `"a"`   | Define balise type of navLink             |
+| Name              | Type                  | Default | Description                                                                                                                          |
+| ----------------- | --------------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------ |
+| menus <required/> | `IHeaderNavMenu<T>[]` | -       | Array of menu objets to be rendered in vertical or horizontal lists                                                                  |
+| isMobile          | `boolean`             | `false` | Determines if the menus will be displayed as a horizontal list of NavLink components (desktop) or as a vertical SidebarMenu (mobile) |
+| navLinkComponent  | `ElementType`         | `"a"`   | Type of Element tag used for the NavLink components                                                                                  |
 
 ## IHeaderNavMenu
 
 `IHeaderNavMenu` has a generic `T` that extend of `number | string` and it extend of `IMenuItem<T>`
 
-| Name     | Type                  | Description                         |
-| -------- | --------------------- | ----------------------------------- |
-| children | `IHeaderNavMenu<T>[]` | Item array of type `IHeaderNavMenu` |
-| url      | `string`              | Source url                          |
+| Name     | Type                  | Description                                      |
+| -------- | --------------------- | ------------------------------------------------ |
+| children | `IHeaderNavMenu<T>[]` | Object array to be rendered in a header sub-menu |
+| url      | `string`              | the url of the navigation link                   |

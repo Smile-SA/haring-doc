@@ -1,16 +1,7 @@
 # Searchable Checkbox List
 
 <Description
-  extendsInfo={[
-    {
-      label: 'Input',
-      link: 'https://v6.mantine.dev/core/input/',
-    },
-    {
-      label: 'Checkbox',
-      link: 'https://v6.mantine.dev/core/checkbox/',
-    },
-  ]}
+  extendsInfo={[]}
   importExample="import { searchablecheckboxlist } from '@smile/react-front-kit';"
   packageInfo={{
     label: '@smile/react-front-kit',
@@ -32,17 +23,19 @@
 
 ## Props
 
-| Name          | Type                          | Default               | Description                           |
-| ------------- | ----------------------------- | --------------------- | ------------------------------------- |
-| checkboxes    | `T[]`                         | -                     | Array of Checkbox                     |
-| buttonLabel   | `string`                      | `"Validate changes"`  | Array of Checkbox                     |
-| onClickButton | `((checkboxes: T[]) => void)` | -                     | Callback function of button `onClick` |
-| placeholder   | `string`                      | `"Search in options"` | Array of Checkbox                     |
+`T` extends ICheckbox
+
+| Name          | Type                          | Default               | Description                                                                                                                  |
+| ------------- | ----------------------------- | --------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
+| checkboxes    | `T[]`                         | -                     | Object array that displays a list of checkboxes with their values and labels in different rows if they are activated or not. |
+| buttonLabel   | `string`                      | `"Validate changes"`  | Label of button                                                                                                              |
+| onClickButton | `((checkboxes: T[]) => void)` | -                     | Called when the confirm button is clicked                                                                                    |
+| placeholder   | `string`                      | `"Search in options"` | placeholder of input text                                                                                                    |
 
 ## ICheckbox
 
-| Attribute          | Type               | Description    |
-| ------------------ | ------------------ | -------------- |
-| active             | `boolean`          | Checked or not |
-| id <Required/>     | `number \| string` | id of checkbox |
-| label: <Required/> | 'string'           | value of label |
+| Attribute          | Type               | Description                                                        |
+| ------------------ | ------------------ | ------------------------------------------------------------------ |
+| active             | `boolean`          | Controlled value that determines if the Checkbox is checked or not |
+| id <Required/>     | `number \| string` | Id of the checkbox                                                 |
+| label: <Required/> | 'string'           | Label of the Checkbox                                              |
