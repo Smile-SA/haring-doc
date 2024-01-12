@@ -1,0 +1,41 @@
+# Searchable Checkbox List
+
+<Description
+  extendsInfo={[]}
+  importExample="import { searchablecheckboxlist } from '@smile/react-front-kit';"
+  packageInfo={{
+    label: '@smile/react-front-kit',
+    link: 'https://www.npmjs.com/package/@smile/react-front-kit',
+  }}
+  sourceInfo={{
+    link: 'https://github.com/Smile-SA/react-front-kit/blob/main/packages/react-front-kit/src/Components/SearchableCheckboxList/SearchableCheckboxList.tsx',
+  }}
+>
+  Renders a search bar with checkboxes and a validation button
+</Description>
+
+## Storybook Docs
+
+<StorybookEmbed
+  storyId="3-custom-components-searchablecheckboxlist--docs"
+  height="820"
+/>
+
+## Props
+
+`T` extends ICheckbox
+
+| Name          | Type                          | Default               | Description                                                                                                                  |
+| ------------- | ----------------------------- | --------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
+| checkboxes    | `T[]`                         | -                     | Object array that displays a list of checkboxes with their values and labels in different rows if they are activated or not. |
+| buttonLabel   | `string`                      | `"Validate changes"`  | Label of button                                                                                                              |
+| onClickButton | `((checkboxes: T[]) => void)` | -                     | Called when the confirm button is clicked                                                                                    |
+| placeholder   | `string`                      | `"Search in options"` | placeholder of input text                                                                                                    |
+
+## ICheckbox
+
+| Attribute          | Type               | Description                                                        |
+| ------------------ | ------------------ | ------------------------------------------------------------------ |
+| active             | `boolean`          | Controlled value that determines if the Checkbox is checked or not |
+| id <Required/>     | `number \| string` | Id of the checkbox                                                 |
+| label: <Required/> | 'string'           | Label of the Checkbox                                              |
