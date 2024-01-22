@@ -29,27 +29,19 @@
 
 ## Props
 
-| Name                       | Type                                                     | Default            | Description                                         |
-| -------------------------- | -------------------------------------------------------- | ------------------ | --------------------------------------------------- |
-| activeFilters              | [`ISidebarFilter[]`](#isidebarfilter)                    | `[]`               | Array of active filter values                       |
-| defaultOpenedActiveFilters | `booleane`                                               | `true`             | Define if collapse of active filters tags is opened |
-| defaultOpenedMenuIds       | `number \| string`                                       | `[]`               | Default collapse menu opened                        |
-| deleteButtonLabel          | `string`                                                 | `"Remove all"`     | Label of button that removes all active filters     |
-| filterButtonLabel          | `string`                                                 | `"Filter"`         | Label of submit button                              |
-| menus                      | [`IFiltersItem<string \| number>[]`](#ifiltersitem)      | `[]`               | Array of nested menus containing filters            |
-| title                      | `ReactNode`                                              | `"Active filters"` | Title shown at the top of the column                |
-| closeAllFiltersLabel       | `string`                                                 | `"Close all"`      | Label of button close all filters                   |
-| onDeleteButtonClick        | [`(filters: ISidebarFilter[]) => void`](#isidebarfilter) | -                  | Called when an active filter is removed             |
-| onFilterButtonClick        | [`(filters: ISidebarFilter[]) => void`](#isidebarfilter) | -                  | Called when submit button is clicked                |
-| openAllFiltersLabel        | `string`                                                 | `"Open all"`       | Label of button open all filters                    |
-
-### `IFiltersItem`
-
-| Attribute | Type             | Description                                                     |
-| --------- | ---------------- | --------------------------------------------------------------- |
-| children  | `IFiltersItem[]` | Nested array of menus                                           |
-| content   | `ReactNode`      | Filter(s) contained in the menu                                 |
-| ...       | -                | Extends `IMenuItem` of [SidebarMenu](./sidebar-menu#imenuitem). |
+| Name                       | Type                                                        | Default            | Description                                         |
+| -------------------------- | ----------------------------------------------------------- | ------------------ | --------------------------------------------------- |
+| activeFilters              | [`ISidebarFilter[]`](#isidebarfilter)                       | `[]`               | Array of active filter values                       |
+| defaultOpenedActiveFilters | `booleane`                                                  | `true`             | Define if collapse of active filters tags is opened |
+| defaultOpenedMenuIds       | `number \| string`                                          | `[]`               | Default collapse menu opened                        |
+| deleteButtonLabel          | `string`                                                    | `"Remove all"`     | Label of button that removes all active filters     |
+| filterButtonLabel          | `string`                                                    | `"Filter"`         | Label of submit button                              |
+| menus                      | [`IMenuItem<string \| number>[]`](./sidebar-menu#imenuitem) | `[]`               | Array of nested menus containing filters            |
+| title                      | `ReactNode`                                                 | `"Active filters"` | Title shown at the top of the column                |
+| closeAllFiltersLabel       | `string`                                                    | `"Close all"`      | Label of button close all filters                   |
+| onDeleteButtonClick        | [`(filters: ISidebarFilter[]) => void`](#isidebarfilter)    | -                  | Called when an active filter is removed             |
+| onFilterButtonClick        | [`(filters: ISidebarFilter[]) => void`](#isidebarfilter)    | -                  | Called when submit button is clicked                |
+| openAllFiltersLabel        | `string`                                                    | `"Open all"`       | Label of button open all filters                    |
 
 ### `ISidebarFilter`
 
