@@ -1,10 +1,13 @@
+import { GitHubLogo } from '../../src/icons/GitHubLogo';
+
 # Action Bar
 
 <Description
   extendsInfo={[
     {
-      label: 'Group',
-      link: 'https://v6.mantine.dev/core/group/',
+      label: 'ActionRowOverflow',
+      link: './action-row-overflow',
+      logo: <GitHubLogo />,
     },
   ]}
   importExample="import { ActionBar } from '@smile/react-front-kit';"
@@ -27,13 +30,9 @@
 
 ## Props
 
-ActionBar takes a `<Data>` generic type that extends `Record<string, unknown>`.
+ActionBar takes a `<Data>` generic type that extends `Record<string, unknown>`, to be used by [ActionRowOverflow](./action-row-overflow).
 
-| Name                              | Type                                                           | Default                                                                 | Description                                                                                                                                                                         |
-| --------------------------------- | -------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| selectedElements <Required/>      | `Data[]`                                                       | -                                                                       | Array of currently selected elements, necessary for the `actions` to be able to pass those elements along                                                                           |
-| selectedElementsLabel <Required/> | `(selectedElements: number) => string`                         | ``(selectedElements: number) => `${selectedElements} file(s) selected`` | Function used to generate the string that displays how many elements are currently selected, it gives the current number of elements in the `selectedElements` array as a parameter |
-| actions                           | [`IAction`](./thumbnail#ithumbnailaction) `<Data \| Data[]>[]` | -                                                                       | Array of [`IAction`](../shared-types/actions#iactiont) for mass action shown in the bar                                                                                             |
-| modalProps                        | [`IThumbnailAction[]`](./thumbnail#ithumbnailaction)           | -                                                                       | Extra props passed to the internal [Mantine Modal](https://v6.mantine.dev/core/modal/) component, used for actions with confirmation enabled                                        |
-| rowActionNumber                   | `number`                                                       | `1`                                                                     | Index value used to determine which actions will be displayed directly in the action column (before this index) or in the action menu (starting at this index)                      |
-| ...                               | -                                                              | -                                                                       | extends [Group props](https://v6.mantine.dev/core/group/?t=props)                                                                                                                   |
+| Name                              | Type                                   | Default                                                                 | Description                                                                                                                                                                         |
+| --------------------------------- | -------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| selectedElementsLabel <Required/> | `(selectedElements: number) => string` | ``(selectedElements: number) => `${selectedElements} file(s) selected`` | Function used to generate the string that displays how many elements are currently selected, it gives the current number of elements in the `selectedElements` array as a parameter |
+| ...                               | -                                      | -                                                                       | extends [`ActionRowOverflow props`](./action-row-overflow#props)                                                                                                                    |
