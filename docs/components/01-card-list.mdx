@@ -1,0 +1,37 @@
+import { GitHubLogo } from '../../src/icons/GitHubLogo';
+
+# Card List
+
+<Description
+  extendsInfo={[
+    {
+      label: 'ScrollArea',
+      link: 'https://v6.mantine.dev/core/scroll-area/',
+    },
+  ]}
+  importExample="import { CardList } from '@smile/react-front-kit';"
+  packageInfo={{
+    label: '@smile/react-front-kit',
+    link: 'https://www.npmjs.com/package/@smile/react-front-kit',
+  }}
+  sourceInfo={{
+    link: 'https://github.com/Smile-SA/react-front-kit/blob/main/packages/react-front-kit/src/Components/CardList/CardList.tsx',
+  }}
+>
+  Renders a section of card containing a list of items with the option of having
+  or not having a separator and a vertical scrolling bar
+</Description>
+
+## Storybook Docs
+
+<StorybookEmbed storyId="3-custom-components-CardList" height="820" />
+
+## Props
+
+| Name                 | Type                | Default | Description                                                                                                |
+| -------------------- | ------------------- | ------- | ---------------------------------------------------------------------------------------------------------- |
+| children <Required/> | `ReactNode[]`       | -       | Table of items to be displayed in the component's list.                                                    |
+| h                    | `string`            | -       | Height of component props from [scrollArea props](https://v6.mantine.dev/core/group/?t=props) from Mantine |
+| separator            | `boolean`           | `true`  | Enable or disable the display of the separator between items.                                              |
+| spacing              | `MantineNumberSize` | `"xl"`  | Space between items.                                                                                       |
+| ...                  |                     | -       | Extends [scrollArea props](https://v6.mantine.dev/core/group/?t=props) from Mantine                        |
