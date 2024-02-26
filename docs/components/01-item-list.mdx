@@ -5,8 +5,8 @@ import { GitHubLogo } from '../../src/icons/GitHubLogo';
 <Description
   extendsInfo={[
     {
-      label: 'ActionRowOverflow',
-      link: './action-row-overflow',
+      label: 'CardList',
+      link: './card-list',
       logo: <GitHubLogo />,
     },
   ]}
@@ -29,9 +29,16 @@ import { GitHubLogo } from '../../src/icons/GitHubLogo';
 
 ## Props
 
-ItemList takes a `<Data>` generic type that extends `Record<string, unknown>`, to be used by [ActionRowOverflow](./action-row-overflow).
-
 | Name              | Type      | Default | Description                                                                    |
 | ----------------- | --------- | ------- | ------------------------------------------------------------------------------ |
-| items <Required/> | `IItem[]` |         | An array of elements of type IItem that allows you to populate the list items. |
-| ...               | -         | -       | extends [`ICardListProps`](./card-list#props)                                  |
+| items <Required/> | `IItem[]` | -       | An array of elements of type IItem that allows you to populate the list items. |
+| ...               | -         | -       | Extends [`ICardListProps`](./card-list#props)                                  |
+
+## IItem
+
+| Attribute         | Type     | Description                             |
+| ----------------- | -------- | --------------------------------------- |
+| color             | `string` | Color displayed to the left of the text |
+| description       | `string` | Element below the title                 |
+| details           | `string` | Element element below details           |
+| title <required/> | `string` | Item title                              |
