@@ -1,0 +1,37 @@
+import { GitHubLogo } from '../../src/icons/GitHubLogo';
+
+# Item list
+
+<Description
+  extendsInfo={[
+    {
+      label: 'ActionRowOverflow',
+      link: './action-row-overflow',
+      logo: <GitHubLogo />,
+    },
+  ]}
+  importExample="import { ItemList } from '@smile/react-front-kit';"
+  packageInfo={{
+    label: '@smile/react-front-kit',
+    link: 'https://www.npmjs.com/package/@smile/react-front-kit',
+  }}
+  sourceInfo={{
+    link: 'https://github.com/Smile-SA/react-front-kit/blob/main/packages/react-front-kit/src/Components/ItemList/ItemList.tsx',
+  }}
+>
+  Display a list of simple items with a title, a color, a details section, and a
+  description.
+</Description>
+
+## Storybook Docs
+
+<StorybookEmbed storyId="3-custom-components-ItemList--docs" height="820" />
+
+## Props
+
+ItemList takes a `<Data>` generic type that extends `Record<string, unknown>`, to be used by [ActionRowOverflow](./action-row-overflow).
+
+| Name              | Type      | Default | Description                                                                    |
+| ----------------- | --------- | ------- | ------------------------------------------------------------------------------ |
+| items <Required/> | `IItem[]` |         | An array of elements of type IItem that allows you to populate the list items. |
+| ...               | -         | -       | extends [`ICardListProps`](./card-list#props)                                  |
