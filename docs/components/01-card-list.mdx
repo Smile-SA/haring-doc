@@ -24,14 +24,15 @@ import { GitHubLogo } from '../../src/icons/GitHubLogo';
 
 ## Storybook Docs
 
-<StorybookEmbed storyId="3-custom-components-CardList" height="820" />
+<StorybookEmbed storyId="3-custom-components-cardlist" height="2180" />
 
 ## Props
 
-| Name                 | Type                | Default | Description                                                                                                                                                                                      |
-| -------------------- | ------------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| children <Required/> | `ReactNode[]`       | -       | Table of items to be displayed in the component's list.                                                                                                                                          |
-| h                    | `string`            | -       | Height of component props from [scrollArea props](https://v6.mantine.dev/core/group/?t=props) from Mantine. If the component's height is smaller than its content, a vertical scrollbar appears. |
-| separator            | `boolean`           | `true`  | Enable or disable the display of the separator between items.                                                                                                                                    |
-| spacing              | `MantineNumberSize` | `"xl"`  | Space between items.                                                                                                                                                                             |
-| ...                  |                     | -       | Extends [scrollArea props](https://v6.mantine.dev/core/group/?t=props) from Mantine                                                                                                              |
+| Name                 | Type                | Default | Description                                                                                                                                                                                            |
+| -------------------- | ------------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| children <Required/> | `ReactNode[]`       | -       | Table of items to be displayed in the component's list.                                                                                                                                                |
+| h                    | `string`            | -       | Height of component props from [scrollArea props](https://v6.mantine.dev/core/scroll-area/?t=props) from Mantine. If the component's height is smaller than its content, a vertical scrollbar appears. |
+| separator            | `boolean`           | `true`  | Enable or disable the display of the separator between items.                                                                                                                                          |
+| gap                  | `MantineNumberSize` | `"xl"`  | Space between items.                                                                                                                                                                                   |
+| stackProps           | `stackProps`        | -       | Allows access to the props of the sub-component Stack.                                                                                                                                                 |
+| ...                  |                     | -       | Extends [ScrollArea props](https://v6.mantine.dev/core/scroll-area/?t=props) from Mantine                                                                                                              |
