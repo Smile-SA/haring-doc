@@ -1,0 +1,30 @@
+import { GitHubLogo } from '../../src/icons/GitHubLogo';
+
+# Event list
+
+<Description
+  extendsInfo={[]}
+  importExample="import { EventList } from '@smile/react-front-kit';"
+  packageInfo={{
+    label: '@smile/react-front-kit',
+    link: 'https://www.npmjs.com/package/@smile/react-front-kit',
+  }}
+  sourceInfo={{
+    link: 'https://github.com/Smile-SA/react-front-kit/blob/main/packages/react-front-kit/src/Components/EventList/EventList.tsx',
+  }}
+>
+  Simple item with a title, a color, a details section, and a description.
+</Description>
+
+## Storybook Docs
+
+<StorybookEmbed storyId="3-custom-components-EventList--docs" height="820" />
+
+## Props
+
+| Name              | Type        | Default | Description                             |
+| ----------------- | ----------- | ------- | --------------------------------------- |
+| color             | `string`    | -       | Color displayed to the left of the text |
+| description       | `ReactNode` | -       | Element below the title                 |
+| details           | `ReactNode` | -       | Element below details                   |
+| title <required/> | `ReactNode` | -       | Item title                              |
