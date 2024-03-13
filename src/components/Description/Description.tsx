@@ -5,6 +5,7 @@ import CodeBlock from '@theme/CodeBlock';
 import { GitHubLogo } from '@site/src/icons/GitHubLogo';
 import { MantineLogo } from '@site/src/icons/MantineLogo';
 import { NpmLogo } from '@site/src/icons/NpmLogo';
+import { StorybookLogo } from '@site/src/icons/StorybookLogo';
 
 import styles from './styles.module.css';
 
@@ -31,6 +32,7 @@ export interface IDescriptionProps {
   importExample: string;
   packageInfo: IDescriptionPackage;
   sourceInfo: IDescriptionSource;
+  storybookInfo?: string;
 }
 
 /**
@@ -45,6 +47,7 @@ export default function Description(props: IDescriptionProps): ReactNode {
     importExample,
     packageInfo,
     sourceInfo,
+    storybookInfo,
   } = props;
   return (
     <div className={styles.descriptionContainer}>
@@ -78,6 +81,18 @@ export default function Description(props: IDescriptionProps): ReactNode {
             {packageInfo.logo ?? <NpmLogo />} {packageInfo.label}
           </a>
         </li>
+        {Boolean(storybookInfo) && (
+          <li>
+            <span>Storybook</span>
+            <a
+              href={`https://smile-sa.github.io/react-front-kit/?path=/docs/${storybookInfo}`}
+              rel="noreferrer"
+              target="_blank"
+            >
+              <StorybookLogo style={{ width: 16 }} /> Storybook
+            </a>
+          </li>
+        )}
       </ul>
     </div>
   );
