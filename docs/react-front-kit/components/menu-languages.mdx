@@ -1,4 +1,4 @@
-import { GitHubLogo } from '../../src/icons/GitHubLogo';
+import { GitHubLogo } from '../../../src/icons/GitHubLogo';
 
 # Menu languages
 
@@ -40,9 +40,9 @@ MenuLanguages takes a `<Data>` generic type that extends `Record<string, unknown
 | squareFormat          | `boolean` | `false` | Displays the default 4x3 format, If this prop is set to true, it shows flags in a 1x1 format |
 | ...                   |           | -       | Extend props from [ButtonListOrDropdown](./button-list-or-dropdown) component                |
 
-## ILang
+## `ILang`
 
-| Name    | Type     | Description                                         |
-| ------- | -------- | --------------------------------------------------- |
-| country | `string` |                                                     |
-| ...     |          | extends [IOption]('../../../shared-types/i-options) |
+| Name    | Type     | Description                                              |
+| ------- | -------- | -------------------------------------------------------- |
+| country | `string` |                                                          |
+| ...     |          | extends [`IOption`]('../../../../shared-types/i-options) |
