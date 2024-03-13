@@ -20,21 +20,21 @@
 
 ## Props
 
-| Name    | Type                                                                       | Default | Description                        |
-| ------- | -------------------------------------------------------------------------- | ------- | ---------------------------------- |
-| actions | [`IAction`](../shared-types/actions#iactiont)[`<IThumbnail>`](#ithumbnail) | -       | Array of actions for the thumbnail |
-| ...     | -                                                                          | -       | extends [IThumbnail](#ithumbnail)  |
+| Name    | Type                                                                          | Default | Description                        |
+| ------- | ----------------------------------------------------------------------------- | ------- | ---------------------------------- |
+| actions | [`IAction`](../../shared-types/actions#iactiont)[`<IThumbnail>`](#ithumbnail) | -       | Array of actions for the thumbnail |
+| ...     | -                                                                             | -       | extends [IThumbnail](#ithumbnail)  |
 
 ### `IThumbnail`
 
-| Attribute      | Type                                 | Description                                 |
-| -------------- | ------------------------------------ | ------------------------------------------- |
-| iconType       | [Icon Map](../shared-types/icon-map) | Icon type of the thumbnail                  |
-| id <Required/> | `number \| string`                   | Id of the thumbnail                         |
-| image          | `string`                             | Image of the thumbnail                      |
-| label          | `string`                             | Label of the thumbnail                      |
-| selected       | `boolean`                            | Highlights the thumbnail as a selected item |
-| onClick        | `() => void`                         | Called when the thumbnail is clicked        |
+| Attribute      | Type                                    | Description                                 |
+| -------------- | --------------------------------------- | ------------------------------------------- |
+| iconType       | [Icon Map](../../shared-types/icon-map) | Icon type of the thumbnail                  |
+| id <Required/> | `number \| string`                      | Id of the thumbnail                         |
+| image          | `string`                                | Image of the thumbnail                      |
+| label          | `string`                                | Label of the thumbnail                      |
+| selected       | `boolean`                               | Highlights the thumbnail as a selected item |
+| onClick        | `() => void`                            | Called when the thumbnail is clicked        |
 
 ### `IThumbnailData`
 
@@ -42,4 +42,4 @@ Corresponds to [`IThumbnail | IThumbnail[]`](#ithumbnail)
 
 ### `IThumbnailAction`
 
-Corresponds to [`IAction`](../shared-types/actions#iactiont)[`<IThumbnailData>`](#ithumbnaildata)
+Corresponds to [`IAction`](../../shared-types/actions#iactiont)[`<IThumbnailData>`](#ithumbnaildata)
