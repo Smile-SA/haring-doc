@@ -1,0 +1,37 @@
+# Data Badge
+
+<Description
+  extendsInfo={[
+    {
+      label: 'Badge',
+      link: 'https://mantine.dev/core/badge/',
+    },
+  ]}
+  importExample="import { DataBadge } from '@smile/react-front-kit';"
+  packageInfo={{
+    label: '@smile/react-front-kit',
+    link: 'https://www.npmjs.com/package/@smile/react-front-kit',
+  }}
+  sourceInfo={{
+    link: 'https://github.com/Smile-SA/react-front-kit/blob/main/packages/react-front-kit/src/Components/DataBadge/DataBadge.tsx',
+  }}
+  storybookInfo="3-custom-components-databadge--docs"
+>
+  Display a badge that spans the entire width of the parent component with a
+  number field and text. There are two types of displays: large and medium.
+</Description>
+
+## Storybook Docs
+
+<StorybookEmbed storyId="3-custom-components-databadge--docs" height="1180" />
+
+## Props
+
+| Name     | Type                  | Default | Description                                                                                                                                                                                                                        |
+| -------- | --------------------- | ------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| children | `string`              | -       | The text is displayed to the right of the number.                                                                                                                                                                                  |
+| color    | `DefaultMantineColor` | -       | The color applied to the badge, and the contrast is automatically managed by the `autoContrast` prop of the `Badge` component. If the prop is not specified, the text color will be black, and there will be no `backgroundColor`. |
+| number   | `number`              | -       | The number value is displayed to the left of the text. The `fit-content` property and a `margin-right` are applied to the number tag.                                                                                              |
+| size     | `"lg" \| "md"`        | `"md"`  | Controls the appearance of the component. Allows switching between two templates: `"md"` and `"lg"`.                                                                                                                               |
+| ratio    | `number `             | -       | Manages the default width size of the number tag.                                                                                                                                                                                  |
+| ...      | -                     | -       | extends [`Badge props`](https://mantine.dev/core/badge/)                                                                                                                                                                           |
