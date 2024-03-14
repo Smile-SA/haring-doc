@@ -1,0 +1,49 @@
+# Full Name Fields
+
+<Description
+  extendsInfo={[
+    {
+      label: 'Flex',
+      link: 'https://mantine.dev/core/flex/',
+    },
+    {
+      label: 'TextInput',
+      link: 'https://mantine.dev/core/text-input/',
+    },
+  ]}
+  importExample="import { FullNameFields } from '@smile/react-front-kit';"
+  packageInfo={{
+    label: '@smile/react-front-kit',
+    link: 'https://www.npmjs.com/package/@smile/react-front-kit',
+  }}
+  sourceInfo={{
+    link: 'https://github.com/Smile-SA/react-front-kit/blob/main/packages/react-front-kit/src/Components/FullNameFields/FullNameFields.tsx',
+  }}
+>
+  Displaying a grouped input with first name and last name, usable in a
+  controlled manner.
+</Description>
+
+## Storybook Docs
+
+<StorybookEmbed
+  storyId="3-custom-components-fullnamefields--docs"
+  height="820"
+/>
+
+## Props
+
+| Name           | Type                                                             | Default | Description                                                                                                                     |
+| -------------- | ---------------------------------------------------------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------- |
+| firstNameProps | [`TextInputProps`](https://mantine.dev/core/text-input/?t=props) | -       | extends [`text input props`](https://mantine.dev/core/text-input/) If configured, the changes will apply to the firstName input |
+| lastNameProps  | [`TextInputProps`](https://mantine.dev/core/text-input/?t=props) | -       | extends [`text input props`](https://mantine.dev/core/text-input/) If configured, the changes will apply to the lastName input  |
+| onChange       | `((value: IFullNameFieldsValues) => void)`                       | -       | Callback function returning the value of the input that has just been changed                                                   |
+| value          | `IFullNameFieldsValues`                                          | -       | Allows setting the values of the two text input fields                                                                          |
+| ...            | -                                                                | -       | extends [`flex props`](https://mantine.dev/core/flex/?t=props)                                                                  |
+
+## IFullNameFieldsValues
+
+| Name      | Type     | Default | Description                |
+| --------- | -------- | ------- | -------------------------- |
+| firstName | `string` | -       | Value of `firstName` field |
+| lastName  | `string` | -       | Value of `lastName` field  |

@@ -1,0 +1,47 @@
+import { GitHubLogo } from '../../../src/icons/GitHubLogo';
+
+# Calendar Header
+
+<Description
+  extendsInfo={[
+    {
+      label: 'CalendarHeader',
+      link: 'https://github.com/mantinedev/mantine/blob/master/packages/%40mantine/dates/src/components/CalendarHeader/CalendarHeader.tsx',
+    },
+  ]}
+  importExample="import { CalendarHeader } from '@smile/react-front-kit';"
+  packageInfo={{
+    label: '@smile/react-front-kit',
+    link: 'https://www.npmjs.com/package/@smile/react-front-kit',
+  }}
+  sourceInfo={{
+    link: 'https://github.com/Smile-SA/react-front-kit/blob/main/packages/react-front-kit/src/Components/CalendarHeader/CalendarHeader.tsx',
+  }}
+>
+  Renders a horizontal bar displaying the number of selected elements and an
+  array of [`IAction`s](../../shared-types/actions#iactiont) as
+  [ActionIcons](https://v6.mantine.dev/core/action-icon/)
+</Description>
+
+## Storybook Docs
+
+<StorybookEmbed
+  storyId="3-custom-components-calendarheader--docs"
+  height="1780"
+/>
+
+## Props
+
+CalendarHeader takes a `<Data>` generic type that extends `Record<string, unknown>`, to be used by [ActionRowOverflow](./action-row-overflow).
+
+| Name              | Type                                                                                                        | Default | Description                                                                                                                                                    |
+| ----------------- | ----------------------------------------------------------------------------------------------------------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| date <Required/>  | `Date`                                                                                                      | -       |                                                                                                                                                                |
+| label             | `ReactNode`                                                                                                 | -       |                                                                                                                                                                |
+| level <Required/> | `"month" \| "year"  \| "decade"`                                                                            | -       |                                                                                                                                                                |
+| onDateClick       | `((event: MouseEvent<HTMLButtonElement, MouseEvent>, date: Date, level: ICalendarHeaderClickType) => void)` | -       |                                                                                                                                                                |
+| onNext            |                                                                                                             | -       |                                                                                                                                                                |
+| onPrevious        |                                                                                                             | -       |                                                                                                                                                                |
+| monthProps        | `Omit<MonthProps, "month">`                                                                                 | -       |                                                                                                                                                                |
+| yearsListProps    | `Omit<YearsListProps, "decade">`                                                                            | -       |                                                                                                                                                                |
+| ...               | -                                                                                                           | -       | extends [`CalendarHeader props`](https://github.com/mantinedev/mantine/blob/master/packages/%40mantine/dates/src/components/CalendarHeader/CalendarHeader.tsx) |
