@@ -1,8 +1,15 @@
 # Getting started
 
+## Introduction
+
+React Front Kit is a component library based on [Mantine](https://mantine.dev/) that helps you build frontend quickly.
+
 ## What you'll need
 
-- [Node.js](https://nodejs.org/en/download/) version 18.0 or above
+- [Node.js](https://nodejs.org/en/download/) version 16.0 or above
+- A [React](https://react.dev/) project version 18.0 or above.
+
+Also check the getting started page of [Mantine](https://mantine.dev/getting-started/).
 
 ## Installation
 
@@ -65,7 +72,7 @@ If you need table related components you can install `@smile/react-front-kit-tab
 You must install `@smile/react-front-kit` first and then add `@smile/react-front-kit-table` with:
 
 ```bash
-npm i @smile/react-front-kit-table @mantine/dates dayjs npm i  @tabler/icons-react
+npm i @smile/react-front-kit-table @mantine/dates dayjs mantine-react-table@beta @tabler/icons-react
 ```
 
 And import the styles:
