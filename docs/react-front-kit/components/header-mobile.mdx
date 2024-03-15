@@ -30,13 +30,18 @@
 
 ## Props
 
-| Name           | Type                         | Default | Description                                                                                          |
-| -------------- | ---------------------------- | ------- | ---------------------------------------------------------------------------------------------------- |
-| children       | `ReactNode`                  | -       | Main content of header                                                                               |
-| height         | `number`                     | `90`    | Height of Header                                                                                     |
-| left           | `ReactNode`                  | -       | Left section                                                                                         |
-| right          | `ReactNode`                  | -       | Right section                                                                                        |
-| searchValue    | `string`                     | -       | Controlled value of search bar input                                                                 |
-| onSearchSubmit | `(event: FormEvent) => void` | -       | Called when search bar input is submitted                                                            |
-| WithBorder     | `boolean`                    | `false` | Display or not a border on the Header                                                                |
-| ...            | -                            | -       | extends [Mantine's HeaderProps](https://v6.mantine.dev/core/app-shell/?t=props#headercomponentprops) |
+| Name             | Type                                          | Default | Description                                                                                          |
+| ---------------- | --------------------------------------------- | ------- | ---------------------------------------------------------------------------------------------------- |
+| children         | `ReactNode`                                   | -       | Main content of header                                                                               |
+| height           | `number`                                      | `90`    | Height of Header                                                                                     |
+| left             | `ReactNode`                                   | -       | Left section                                                                                         |
+| right            | `ReactNode`                                   | -       | Right section                                                                                        |
+| searchValue      | `string`                                      | -       | Controlled value of search bar input                                                                 |
+| onSearchChange   | `(value: string) => void`                     | -       | Callback function that returns the value of the field as soon as it changes                          |
+| onSearchSubmit   | `(event: FormEvent) => void`                  | -       | Called when search bar input is submitted                                                            |
+| searchInputProps | `Omit<TextInputProps, 'onChange' \| 'value'>` | -       | Allows configuring the props of the child component TextInput                                        |
+| WithBorder       | `boolean`                                     | `false` | Display or not a border on the Header                                                                |
+| hasSearch        | `boolean`                                     | `true`  | Control the display of the search bar                                                                |
+| burgerProps      | `Omit<BurgerProps, "onClick" \| "opened">`    | -       | Allows configuring the props of the child component Burger                                           |
+| collapseProps    | `Omit<CollapseProps, "in">`                   | -       | Allows configuring the props of the child component Collapse                                         |
+| ...              | -                                             | -       | extends [Mantine's HeaderProps](https://v6.mantine.dev/core/app-shell/?t=props#headercomponentprops) |
