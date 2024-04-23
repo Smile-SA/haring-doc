@@ -16,9 +16,10 @@
     link: 'https://github.com/Smile-SA/react-front-kit/blob/main/packages/react-front-kit/src/Components/FetchAutocompleteField/FetchAutocompleteField.tsx',
   }}
 >
-  Displaying an autocomplete field with an api request pre-making. The field can
-  returns api data with onFetchData callback function and can also returns
-  option selected with this associated data.
+  Displaying an autocomplete field with an the request handling pre-making. The
+  field can returns data with `onFetchData` callback function and can also
+  returns option selected with this associated the data on click of the option
+  displayed by the filed with the `onOptionSubmit` callback function.
 </Description>
 
 ## Storybook Docs
@@ -33,10 +34,10 @@
 | Name           | Type                                      | Default                                                        | Description                                                                                                                                                                    |
 | -------------- | ----------------------------------------- | -------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | deDebounce     | `number`                                  | `1000`                                                         | time before the string written in the field is taken into account. If the user modifies the field value before the end of the delay, the delay starts again from the beginning |
-| minValueLength | `number`                                  | `5`                                                            | minimum length of the field value for started api request                                                                                                                      |
+| minValueLength | `number`                                  | `5`                                                            | minimum length of the field value for started the request                                                                                                                      |
 | placeholder    | `string`                                  | `"89 Pall Mall, St. James's, London SW1Y 5HS, United Kingdom"` | Value of the placeholder field                                                                                                                                                 |
 | onOptionSubmit | `(value: IValue<T>) => void`              | -                                                              | Callback function called when an option of the field is selected. The function returns [`IValue<T>`](#IValue<T>)                                                               |
-| onFetchData    | `(value: string) => Promise<IValue<T>[]>` | -                                                              | Callback function called when api request returns data                                                                                                                         |
+| onFetchData    | `(value: string) => Promise<IValue<T>[]>` | -                                                              | Callback function called when the request returns data                                                                                                                         |
 | ...            | -                                         | -                                                              | extends [`autocomplete Props`](https://mantine.dev/core/autocomplete/?t=props)                                                                                                 |
 
 ## IFetchOption
@@ -48,7 +49,7 @@
 
 ## IValue`<T>`
 
-| Name             | Type     | Default | Description                                                                      |
-| ---------------- | -------- | ------- | -------------------------------------------------------------------------------- |
-| label<Required/> | `string` | -       | label displayed on options list and returned by the onFetchData function         |
-| Value<Required/> | `T`      | -       | the API data part corresponding to the selected option associated with the label |
+| Name             | Type     | Default | Description                                                                          |
+| ---------------- | -------- | ------- | ------------------------------------------------------------------------------------ |
+| label<Required/> | `string` | -       | label displayed on options list and returned by the onFetchData function             |
+| Value<Required/> | `T`      | -       | the request data part corresponding to the selected option associated with the label |
