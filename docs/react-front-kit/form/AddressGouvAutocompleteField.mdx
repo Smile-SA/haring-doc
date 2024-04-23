@@ -1,0 +1,51 @@
+# Address gouv autocomplete field
+
+<Description
+  extendsInfo={[
+    {
+      label: 'FetchAutocompleteField',
+      link: 'https://github.com/Smile-SA/react-front-kit/blob/main/packages/react-front-kit/src/Form/FetchAutocompleteField/FetchAutocompleteField.tsx',
+    },
+  ]}
+  importExample="import { AddressGouvField } from '@smile/react-front-kit';"
+  packageInfo={{
+    label: '@smile/react-front-kit',
+    link: 'https://www.npmjs.com/package/@smile/react-front-kit',
+  }}
+  sourceInfo={{
+    link: 'https://github.com/Smile-SA/react-front-kit/tree/main/packages/react-front-kit/src/Form/AddressGouvAutocompleteField/AddressGouvAutocompleteField.tsx',
+  }}
+>
+  An autocomplete field which is a [`FetchAutocompleteField
+  Props`](./FetchAutocompleteField) component configured for the
+  [`api-Adresse.data.gouv`](https://adresse.data.gouv.fr/).
+</Description>
+
+## Storybook Docs
+
+<StorybookEmbed
+  storyId="3-custom-form-addressgouvautocompletefield--docs"
+  height="900"
+/>
+
+## Props
+
+| Name        | Type                                                     | Default                                                                                   | Description                                                                                                                                                 |
+| ----------- | -------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| lat         | `string`                                                 | `''`                                                                                      | To be filled in to prioritize these latitude coordinates in the search results.                                                                             |
+| lon         | `string`                                                 | `''`                                                                                      | To be filled in to prioritize these longitude coordinates in the search results.                                                                            |
+| type        | `string`                                                 | `''`                                                                                      | To be filled in to reduce to specific type of results of the search.                                                                                        |
+| onFetchData | `(value: string) => Promise<IValue<IAddressGouvData>[]>` | `A default function getDataAddressGouv that makes a call to the api-adresse.gouv.fr API.` | This callback function return field value to the parameters and to be return `Promise<IValue<IAddressGouvData>[]>` value. By default this props is defined. |
+| ...         | -                                                        | -                                                                                         | extends [`FetchAutocompleteField Props`](./FetchAutocompleteField/#props)                                                                                   |
+
+## IAddressGouvData
+
+IAddressGouvData contain `properties` object with thats types:
+
+| name        | type     | Description            |
+| ----------- | -------- | ---------------------- |
+| city        | `string` | Name of the city       |
+| housenumber | `string` | Number of the house    |
+| label       | `string` | Resume label           |
+| postcode    | `string` | Number of the postcode |
+| street      | `string` | Name of the street     |
