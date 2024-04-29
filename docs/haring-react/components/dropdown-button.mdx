@@ -1,0 +1,32 @@
+# Dropdown Button
+
+<Description
+  extendsInfo={[{ label: 'Menu', link: 'https://v6.mantine.dev/core/menu/' }]}
+  importExample="import { DropdownButton } from '@smile/haring-react';"
+  packageInfo={{
+    label: '@smile/haring-react',
+    link: 'https://www.npmjs.com/package/@smile/haring-react',
+  }}
+  sourceInfo={{
+    link: 'https://github.com/Smile-SA/haring/blob/main/packages/haring-react/src/Components/DropdownButton/DropdownButton.tsx',
+  }}
+  storybookInfo="3-custom-components-dropdownbutton--docs"
+>
+  Renders a Button with a connected dropdown Menu
+</Description>
+
+## Storybook Docs
+
+<StorybookEmbed
+  storyId="3-custom-components-dropdownbutton--docs"
+  height="700"
+/>
+
+## Props
+
+| Name            | Type        | Default | Description                                                       |
+| --------------- | ----------- | ------- | ----------------------------------------------------------------- |
+| buttonComponent | `ReactNode` |         | Override default menu target with custom component                |
+| children        | `ReactNode` |         | Content of the [Menu.Dropdown](https://v6.mantine.dev/core/menu/) |
+| label           | `string`    |         | Button label                                                      |
+| ...             | -           | -       | extends [Menu props](https://v6.mantine.dev/core/menu/?t=props)   |

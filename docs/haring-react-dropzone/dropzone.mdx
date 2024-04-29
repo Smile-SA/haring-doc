@@ -1,0 +1,42 @@
+# Dropzone
+
+<Description
+  extendsInfo={[
+    { label: 'Dropzone', link: 'https://v6.mantine.dev/others/dropzone/' },
+  ]}
+  importExample="import { Dropzone } from '@smile/haring-react-dropzone';"
+  packageInfo={{
+    label: '@smile/haring-react-dropzone',
+    link: 'https://www.npmjs.com/package/@smile/haring-react-dropzone',
+  }}
+  sourceInfo={{
+    link: 'https://github.com/Smile-SA/haring/blob/main/packages/haring-react-dropzone/src/Components/Dropzone/Dropzone.tsx',
+  }}
+  storybookInfo="3-custom-components-dropzone--docs"
+>
+  Capture files from user with drag and drop
+</Description>
+
+## Storybook Docs
+
+<StorybookEmbed storyId="3-custom-components-dropzone--docs" height="970" />
+
+## Props
+
+| Name            | Type                                                                                                                                                                                                | Default                               | Description                                                               |
+| --------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------- | ------------------------------------------------------------------------- |
+| browseLabel     | `string`                                                                                                                                                                                            | `"Browse your device"`                | String displayed at the bottom next to the Eye icon                       |
+| children        | `ReactElement`                                                                                                                                                                                      | -                                     | Element inserted at the bottom of the container                           |
+| dragLabel       | `string`                                                                                                                                                                                            | `"Drag and drop your documents here"` | String displayed in the center of the container                           |
+| files           | [`IFile[]`](#ifile)                                                                                                                                                                                 | `[]`                                  | Controlled value of the current files                                     |
+| buttonPlusTitle | `string`                                                                                                                                                                                            | `"Add button"`                        | Tooltip title of top `+` button                                           |
+| onDrop          | `(files: FileWithPath[]) => void` <br/><br/> See [`FileWithPath`](https://github.com/rtivital/react-dropzone-esm/blob/4bbb571f0d4c01d65025165d891a94c012a468fe/types/react-dropzone.d.ts#L3C1-L3C1) | -                                     | Called when valid files are dropped into dropzone                         |
+| onRemoveFile    | [`(file: IFile) => void`](#ifile)                                                                                                                                                                   | -                                     | Called when added file is removed by clicking on `x` button               |
+| ...             | -                                                                                                                                                                                                   | -                                     | extends [Dropzone props](https://v6.mantine.dev/others/dropzone/?t=props) |
+
+### `IFile`
+
+| Attribute | Type               | Description                                                                                                                                                |
+| --------- | ------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| id        | `number \| string` | Nested array of menus                                                                                                                                      |
+| ...       | -                  | Extends [`FileWithPath`](https://github.com/rtivital/react-dropzone-esm/blob/4bbb571f0d4c01d65025165d891a94c012a468fe/types/react-dropzone.d.ts#L3C1-L3C1) |

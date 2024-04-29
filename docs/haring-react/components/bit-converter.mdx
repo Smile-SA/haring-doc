@@ -1,0 +1,27 @@
+# Bit Converter
+
+<Description
+  importExample="import { BitConverter } from '@smile/haring-react';"
+  packageInfo={{
+    label: '@smile/haring-react',
+    link: 'https://www.npmjs.com/package/@smile/haring-react',
+  }}
+  sourceInfo={{
+    link: 'https://github.com/Smile-SA/haring/blob/main/packages/haring-react/src/Components/BitConverter/BitConverter.tsx',
+  }}
+  storybookInfo="3-custom-components-bitconverter--docs"
+>
+  Converts byte value into human-readable string using [Pretty
+  Bytes](https://github.com/sindresorhus/pretty-bytes)
+</Description>
+
+## Usage
+
+<StorybookEmbed storyId="3-custom-components-bitconverter--docs" height="580" />
+
+## Props
+
+| Name              | Type                                                                           | Default | Description                                                                        |
+| ----------------- | ------------------------------------------------------------------------------ | ------- | ---------------------------------------------------------------------------------- |
+| options           | [`Options`](https://github.com/sindresorhus/pretty-bytes/blob/main/index.d.ts) | -       | `options` passed to [prettyBytes()](https://github.com/sindresorhus/pretty-bytes)) |
+| value <Required/> | `number`                                                                       | -       | The `number` value to format                                                       |

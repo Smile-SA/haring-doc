@@ -1,0 +1,52 @@
+import { MantineReactTableLogo } from '../../src/icons/MantineReactTableLogo';
+import StorybookEmbed from '../../src/components/StorybookEmbed/StorybookEmbed';
+import Description from '../../src/components/Description/Description';
+
+# Table
+
+<Description
+  extendsInfo={[
+    {
+      label: 'MantineReactTable',
+      link: 'https://www.mantine-react-table.com/docs/getting-started/usage',
+      logo: <MantineReactTableLogo />,
+    },
+  ]}
+  importExample="import { Table } from '@smile/haring-react-table';"
+  packageInfo={{
+    label: '@smile/haring-react-table',
+    link: 'https://www.npmjs.com/package/@smile/haring-react-table',
+  }}
+  sourceInfo={{
+    link: 'https://github.com/Smile-SA/haring/blob/main/packages/haring-react-table/src/Components/Table/Table.tsx',
+  }}
+  storybookInfo="3-custom-components-table--docs"
+>
+  Renders a
+  [MantineReactTable](https://www.mantine-react-table.com/docs/getting-started/usage)
+  component with row/mass actions and pagination
+</Description>
+
+## Storybook Docs
+
+<StorybookEmbed storyId="3-custom-components-table--docs" height="16640" />
+
+## Props
+
+| Name            | Type                                                                       | Default           | Description                                                                                                                                                           |
+| --------------- | -------------------------------------------------------------------------- | ----------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| actions         | [`ITableAction`](#itableaction)                                            | `[]`              | Array of [`IAction`](../shared-types/actions#iactiont)s for the table                                                                                                 |
+| menuLabel       | `string`                                                                   | `"Other actions"` | Tooltip label of the "`...`" extra actions menu                                                                                                                       |
+| paginationProps | [`Partial<IPaginationProps>`](../haring-react/components/pagination#props) | -                 | Props of [Pagination](../haring-react/components/pagination#props) component                                                                                          |
+| rowActionNumber | `number`                                                                   | `0`               | Index that determines where the row `actions` array in the actions column is sliced, all actions after this index will be moved inside the "`...`" extra actions menu |
+| ...             | -                                                                          | -                 | extends [MRT_TableOptions props](https://www.mantine-react-table.com/docs/api/table-options)                                                                          |
+
+### `ITableData<Data extends Record<string, unknown>`
+
+Corresponds to either a `Data` object or an array of `Data` objects, or [`MRT_Row`](https://www.mantine-react-table.com/docs/guides/customize-components#mantine-props-and-types)`<Data>` or [`MRT_Row`](https://www.mantine-react-table.com/docs/guides/customize-components#mantine-props-and-types)`<Data>[]`
+
+[`MRT_Row`](https://www.mantine-react-table.com/docs/guides/customize-components#mantine-props-and-types) is a [MantineReactTable](https://www.mantine-react-table.com/docs/getting-started/usage) wrapper type that correspond to a table row.
+
+### `ITableAction`
+
+Corresponds to [`IAction`](../shared-types/actions#iactiont)[`<ITableData>`](#itabledata)

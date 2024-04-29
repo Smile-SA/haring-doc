@@ -1,10 +1,10 @@
-# React Front Kit Docs
+# Haring Docs
 
-This is the documentation website for the [React Front Kit](https://github.com/Smile-SA/react-front-kit) library.
+This is the documentation website for the [Haring](https://github.com/Smile-SA/haring) library.
 
 ## Doc
 
-You can access the documentation here: https://smile-sa.github.io/react-front-kit-doc
+You can access the documentation here: https://smile-sa.github.io/haring-doc
 
 ## Usage
 

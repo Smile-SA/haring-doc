@@ -45,10 +45,10 @@ The `<Header>` component use a `<MantineProvider>` internally to apply the theme
 
 It may be quite difficult to create these 3 themes that look harmonious so we provide a provider to assist you.
 
-You can import our provider from `@smile/react-front-kit-shared` and use it at the top level of your app:
+You can import our provider from `@smile/haring-react-shared` and use it at the top level of your app:
 
 ```jsx
-import { Provider } from '@smile/react-front-kit-shared';
+import { Provider } from '@smile/haring-react-shared';
 
 export default function App({ children }) {
   return (

@@ -85,7 +85,7 @@ export default function Description(props: IDescriptionProps): ReactNode {
           <li>
             <span>Storybook</span>
             <a
-              href={`https://smile-sa.github.io/react-front-kit/?path=/docs/${storybookInfo}`}
+              href={`https://smile-sa.github.io/haring/?path=/docs/${storybookInfo}`}
               rel="noreferrer"
               target="_blank"
             >

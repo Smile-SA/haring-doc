@@ -19,8 +19,8 @@ const FeatureList: IFeatureItem[] = [
     Svg: MountainSvg,
     description: (
       <>
-        React Front Kit Connectors is easy to use and can integrate with any
-        data fetching library you want.
+        Haring Connectors is easy to use and can integrate with any data
+        fetching library you want.
       </>
     ),
     title: 'Easy and Flexible',
@@ -29,8 +29,8 @@ const FeatureList: IFeatureItem[] = [
     Svg: TreeSvg,
     description: (
       <>
-        React Front Kit Connectors lets you focus on your own business logic by
-        managing all basic frontend logic for you.
+        Haring Connectors lets you focus on your own business logic by managing
+        all basic frontend logic for you.
       </>
     ),
     title: 'Focus on What Matters',

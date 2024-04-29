@@ -6,15 +6,15 @@ import type { Config } from '@docusaurus/types';
 import { themes as prismThemes } from 'prism-react-renderer';
 
 const config: Config = {
-  title: 'React Front Kit',
+  title: 'Haring',
   tagline: 'Frontend made easy',
   favicon: 'img/favicon.ico', // TODO: update
 
   url: 'https://smile-sa.github.io',
-  baseUrl: '/react-front-kit-doc/',
+  baseUrl: '/haring-doc/',
 
   organizationName: 'Smile-SA',
-  projectName: 'react-front-kit-doc',
+  projectName: 'haring-doc',
   trailingSlash: false,
 
   onBrokenLinks: 'throw',
@@ -31,7 +31,7 @@ const config: Config = {
       {
         docs: {
           sidebarPath: './sidebars.ts',
-          editUrl: 'https://github.com/Smile-SA/react-front-kit-doc/blob/main/',
+          editUrl: 'https://github.com/Smile-SA/haring-doc/blob/main/',
         },
         theme: {
           customCss: './src/css/custom.css',
@@ -51,9 +51,9 @@ const config: Config = {
     },
     image: 'img/docusaurus-social-card.jpg',
     navbar: {
-      title: 'React Front Kit',
+      title: 'Haring',
       logo: {
-        alt: 'React Front Kit Logo',
+        alt: 'Haring Logo',
         src: 'img/logo.svg', // TODO: update
       },
       items: [
@@ -64,12 +64,12 @@ const config: Config = {
           label: 'Docs',
         },
         {
-          href: 'https://github.com/Smile-SA/react-front-kit',
+          href: 'https://github.com/Smile-SA/haring',
           label: 'GitHub',
           position: 'right',
         },
         {
-          href: 'https://smile-sa.github.io/react-front-kit',
+          href: 'https://smile-sa.github.io/haring',
           label: 'Storybook',
           position: 'right',
         },
@@ -116,12 +116,12 @@ const config: Config = {
           title: 'More',
           items: [
             {
-              label: 'React Front Kit GitHub',
-              href: 'https://github.com/Smile-SA/react-front-kit',
+              label: 'Haring GitHub',
+              href: 'https://github.com/Smile-SA/haring',
             },
             {
-              label: 'React Front Kit Storybook',
-              href: 'https://smile-sa.github.io/react-front-kit',
+              label: 'Haring Storybook',
+              href: 'https://smile-sa.github.io/haring',
             },
             {
               label: 'Mantine',
