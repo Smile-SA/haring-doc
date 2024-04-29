@@ -1,0 +1,38 @@
+# Icon card
+
+<Description
+  extendsInfo={[
+    {
+      label: 'Card',
+      link: 'https://mantine.dev/core/card/',
+    },
+  ]}
+  importExample="import { IconCard } from '@smile/haring-react';"
+  packageInfo={{
+    label: '@smile/haring-react',
+    link: 'https://www.npmjs.com/package/@smile/haring-react',
+  }}
+  sourceInfo={{
+    link: 'https://github.com/Smile-SA/haring/blob/main/packages/haring-react/src/Components/IconCard/IconCard.tsx',
+  }}
+  storybookInfo="3-custom-components-iconcard--docs"
+>
+  Renders a horizontal bar displaying the number of selected elements and an
+  array of [`IAction`s](../../shared-types/actions#iactiont) as
+  [ActionIcons](https://v6.mantine.dev/core/action-icon/)
+</Description>
+
+## Storybook Docs
+
+<StorybookEmbed storyId="3-custom-components-iconcard--docs" height="2020" />
+
+## Props
+
+| Name     | Type        | Default | Description                                                                                                                                     |
+| -------- | ----------- | ------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
+| children | `ReactNode` | -       | Free area in the lower zone of the map                                                                                                          |
+| icon     | `ReactNode` | -       | Area in the top of the map primarily used for displaying icons but can show anything that corresponds to the ReactNode type                     |
+| subTitle | `ReactNode` | -       | SubTitle area                                                                                                                                   |
+| title    | `ReactNode` | -       | TItle area                                                                                                                                      |
+| color    | `string`    | -       | Define the background color of the card. By default, the primary color is applied. Auto-contrast is used to automatically change the text color |
+| ...      | -           | -       | extends [`card props`](https://mantine.dev/core/card/?t=props).                                                                                 |

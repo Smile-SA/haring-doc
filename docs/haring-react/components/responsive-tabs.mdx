@@ -1,0 +1,37 @@
+# Responsive Tabs
+
+<Description
+  extendsInfo={[
+    {
+      label: 'Tabs',
+      link: 'https://v6.mantine.dev/core/tabs/',
+    },
+  ]}
+  importExample="import { ResponsiveTabs } from '@smile/haring-react';"
+  packageInfo={{
+    label: '@smile/haring-react',
+    link: 'https://www.npmjs.com/package/@smile/haring-react',
+  }}
+  sourceInfo={{
+    link: 'https://github.com/Smile-SA/haring/blob/main/packages/haring-react/src/Components/ResponsiveTabs/ResponsiveTabs.tsx',
+  }}
+  storybookInfo="3-custom-components-responsivetabs--docs"
+>
+  Renders a responsive [Mantine Tabs](https://v6.mantine.dev/core/tabs/)
+  component that moves overflowing tabs into a dropdown button
+</Description>
+
+## Storybook Docs
+
+    <StorybookEmbed storyId="3-custom-components-responsivetabs--docs" height="1470"/>
+
+## Props
+
+| Name                    | Type                                                         | Default             | Description                                                                                                                                                          |
+| ----------------------- | ------------------------------------------------------------ | ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| children <Required/>    | `ReactNode`                                                  | -                   | Content rendered below the tabs                                                                                                                                      |
+| tabs <Required/>        | `ReactElement<HTMLButtonElement>[]`                          | -                   | Array of `<Tabs.Tab>` components, see [Tabs Usage](https://v6.mantine.dev/core/tabs/)                                                                                |
+| dropdownButtonAriaLabel | `string`                                                     | `"Overflow Button"` | Aria label of the dropdown button                                                                                                                                    |
+| dropdownButtonProps     | [`ButtonProps`](https://v6.mantine.dev/core/button/?t=props) | -                   | Props for the [Mantine Button](https://v6.mantine.dev/core/button/?t=props) component                                                                                |
+| tabsListProps           | [`TabsListProps`](https://v6.mantine.dev/core/tabs/?t=props) | -                   | Props for the [Mantine Tabs.List](https://v6.mantine.dev/core/tabs/?t=props#tabslist-component-props) component, see [Tabs Usage](https://v6.mantine.dev/core/tabs/) |
+| ...                     | -                                                            | -                   | extends [Tabs props](https://v6.mantine.dev/core/tabs/?t=props)                                                                                                      |

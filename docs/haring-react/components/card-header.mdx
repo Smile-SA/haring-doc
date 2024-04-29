@@ -1,0 +1,36 @@
+import { GitHubLogo } from '../../../src/icons/GitHubLogo';
+
+# Card header
+
+<Description
+  extendsInfo={[
+    {
+      label: 'Box',
+      link: 'https://v6.mantine.dev/core/box/',
+    },
+  ]}
+  importExample="import { CardHeader } from '@smile/haring-react';"
+  packageInfo={{
+    label: '@smile/haring-react',
+    link: 'https://www.npmjs.com/package/@smile/haring-react',
+  }}
+  sourceInfo={{
+    link: 'https://github.com/Smile-SA/haring/blob/main/packages/haring-react/src/Components/CardHeader/CardHeader.tsx',
+  }}
+  storybookInfo="3-custom-components-cardheader--docs"
+>
+  Renders a header with three customizable columns for use within a Card
+  component.
+</Description>
+
+## Storybook Docs
+
+<StorybookEmbed storyId="3-custom-components-cardheader--docs" height="820" />
+
+## Props
+
+| Name                 | Type        | Default | Description                                                                                       |
+| -------------------- | ----------- | ------- | ------------------------------------------------------------------------------------------------- |
+| children <Required/> | `ReactNode` | -       | The central area of the component                                                                 |
+| leftSection          | `ReactNode` | -       | If defined, displays the element from this prop to the left of the central area of the component  |
+| rightSection         | `ReactNode` | -       | If defined, displays the element from this prop to the right of the central area of the component |

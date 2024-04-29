@@ -1,0 +1,51 @@
+import { GitHubLogo } from '../../../src/icons/GitHubLogo';
+
+# Calendar Header
+
+<Description
+  extendsInfo={[
+    {
+      label: 'CalendarHeader',
+      link: 'https://github.com/mantinedev/mantine/blob/master/packages/%40mantine/dates/src/components/CalendarHeader/CalendarHeader.tsx',
+    },
+  ]}
+  importExample="import { CalendarHeader } from '@smile/haring-react';"
+  packageInfo={{
+    label: '@smile/haring-react',
+    link: 'https://www.npmjs.com/package/@smile/haring-react',
+  }}
+  sourceInfo={{
+    link: 'https://github.com/Smile-SA/haring/blob/main/packages/haring-react/src/Components/CalendarHeader/CalendarHeader.tsx',
+  }}
+  storybookInfo="3-custom-components-calendarheader--docs"
+>
+  Display a controlled calendar header with 3 levels of precision: Year, Day,
+  and Decade. The component is based on a component
+  [CalendarHeader](https://github.com/mantinedev/mantine/blob/master/packages/%40mantine/dates/src/components/CalendarHeader/CalendarHeader.tsx)
+  he is not shown in the documentation but visible in the library's code.
+</Description>
+
+## Storybook Docs
+
+<StorybookEmbed
+  storyId="3-custom-components-calendarheader--docs"
+  height="1780"
+/>
+
+## Props
+
+| Name              | Type                                                                                                                                          | Default | Description                                                                                                                                                    |
+| ----------------- | --------------------------------------------------------------------------------------------------------------------------------------------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| date <Required/>  | `Date`                                                                                                                                        | -       | Value given to define the date displayed on the calendarHeader                                                                                                 |
+| level <Required/> | [`ICalendarHeaderClickType`](#icalendarheaderclicktype)                                                                                       | -       | Defines the date level to display in the header modal                                                                                                          |
+| onDateClick       | `((event: MouseEvent<HTMLButtonElement, MouseEvent>, date: Date, level: `[`ICalendarHeaderClickType`](#icalendarheaderclicktype)` ) => void)` | -       | Returns a callback function that provides the value of the date that has just been clicked and the current level                                               |
+| monthProps        | `Omit<MonthProps, "month">`                                                                                                                   | -       | Allows configuring the props of the Month component from Mantine.                                                                                              |
+| monthListProps    | `Omit<MonthsListProps, "year">`                                                                                                               | -       | Allows configuring the props of the MonthList component from Mantine.                                                                                          |
+| yearsListProps    | `Omit<YearsListProps, "decade">`                                                                                                              | -       | Allows configuring the props of the YearsList component from Mantine.                                                                                          |
+| ...               | -                                                                                                                                             | -       | extends [`CalendarHeader props`](https://github.com/mantinedev/mantine/blob/master/packages/%40mantine/dates/src/components/CalendarHeader/CalendarHeader.tsx) |
+
+## ICalendarHeaderClickType
+
+| Type                            | Description                                          |
+| ------------------------------- | ---------------------------------------------------- |
+| `"month" \| "year" \| "decade"` | Value of the click location's level of localization. |

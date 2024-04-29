@@ -4,7 +4,7 @@ const frameStyle = {
   '& > *': { padding: 0 },
   border: '1px solid #aaa',
 };
-const srcBasePath = 'https://smile-sa.github.io/react-front-kit/iframe.html';
+const srcBasePath = 'https://smile-sa.github.io/haring/iframe.html';
 
 interface IExampleProps extends IframeHTMLAttributes<HTMLIFrameElement> {
   storyId: string;

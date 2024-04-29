@@ -1,0 +1,30 @@
+# Breadcrumbs
+
+<Description
+  extendsInfo={[
+    { label: 'Breadcrumbs', link: 'https://v6.mantine.dev/core/breadcrumbs' },
+  ]}
+  importExample="import { Breadcrumbs } from '@smile/haring-react';"
+  packageInfo={{
+    label: '@smile/haring-react',
+    link: 'https://www.npmjs.com/package/@smile/haring-react',
+  }}
+  sourceInfo={{
+    link: 'https://github.com/Smile-SA/haring/blob/main/packages/haring-react/src/Components/Breadcrumbs/Breadcrumbs.tsx',
+  }}
+  storybookInfo="3-custom-components-breadcrumbs--docs"
+>
+  Separate list of react nodes with given separator
+</Description>
+
+## Usage
+
+<StorybookEmbed storyId="3-custom-components-breadcrumbs--docs" height="600" />
+
+## Props
+
+| Name                 | Type        | Default             | Description                                                                   |
+| -------------------- | ----------- | ------------------- | ----------------------------------------------------------------------------- |
+| children <Required/> | `ReactNode` | -                   | Elements inserted after the Breadcrumbs on the same row                       |
+| separator            | `string`    | `default separator` | The `string` or SVG used as a separator between each level                    |
+| ...                  | -           | -                   | extends [Breadcrumbs props](https://v6.mantine.dev/core/breadcrumbs/?t=props) |

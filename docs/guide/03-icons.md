@@ -2,7 +2,7 @@
 
 ## `@phosphor-icons/react`
 
-`@smile/react-front-kit` depends on `@phosphor-icons/react` for the icons.
+`@smile/haring-react` depends on `@phosphor-icons/react` for the icons.
 
 You will need to install it as it required as a peer dependency.
 
@@ -27,20 +27,20 @@ Here is the list of available icons in `@phosphor-icons/react`:
 
 ## `@tabler/icons-react`
 
-`@smile/react-front-kit-table` depends on `mantine-react-table` that depends on the `@tabler/icons-react` icon library.
+`@smile/haring-react-table` depends on `mantine-react-table` that depends on the `@tabler/icons-react` icon library.
 
-You will need to install `@tabler/icons-react` if you use components from `@smile/react-front-kit-table` but you can also customize the icons used by passing any icon you want in the props.
+You will need to install `@tabler/icons-react` if you use components from `@smile/haring-react-table` but you can also customize the icons used by passing any icon you want in the props.
 
-## `@smile/react-front-kit-shared`
+## `@smile/haring-react-shared`
 
-the `@smile/react-front-kit-shared` expose some icons you can also import and use as you wish.
+the `@smile/haring-react-shared` expose some icons you can also import and use as you wish.
 
 you can import then with:
 
 ```tsx
-import { ColumnPlus } from '@smile/react-front-kit-shared';
+import { ColumnPlus } from '@smile/haring-react-shared';
 ```
 
-Here is the list of available icons in `@smile/react-front-kit-shared`:
+Here is the list of available icons in `@smile/haring-react-shared`:
 
 <StorybookEmbed storyId="1-styleguide-icons--custom-icons" height="200" />

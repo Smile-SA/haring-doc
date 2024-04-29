@@ -1,0 +1,39 @@
+# Summary Box
+
+<Description
+  extendsInfo={[{ label: 'Flex', link: 'https://v6.mantine.dev/core/flex' }]}
+  importExample="import { SummaryBox } from '@smile/haring-react';"
+  packageInfo={{
+    label: '@smile/haring-react',
+    link: 'https://www.npmjs.com/package/@smile/haring-react',
+  }}
+  sourceInfo={{
+    link: 'https://github.com/Smile-SA/haring/blob/main/packages/haring-react/src/Components/SummaryBox/SummaryBox.tsx',
+  }}
+  storybookInfo="3-custom-components-summarybox--docs"
+>
+  Renders a box showing optionally a leftNode (left column), rightNode (right
+  column), topNode (top center), titleNode (middle center) or children (bottom
+  center)
+</Description>
+
+## Storybook Docs
+
+<StorybookEmbed storyId="3-custom-components-summarybox--docs" height="950" />
+
+## Props
+
+| Name                      | Type                                                       | Default | Description                                                     |
+| ------------------------- | ---------------------------------------------------------- | ------- | --------------------------------------------------------------- |
+| children                  | `ReactNode`                                                | -       | Content displayed at the bottom of the middle column            |
+| childrenGroupProps        | [`GroupProps`](https://v6.mantine.dev/core/group/?t=props) | -       | Extra props for the `children` group container                  |
+| contentContainerFlexProps | [`FlexProps`](https://v6.mantine.dev/core/flex/?t=props)   | -       | Extra props for the middle column flex container                |
+| leftNode                  | `ReactNode`                                                | -       | Content displayed in the left column                            |
+| leftNodeStackProps        | [`StackProps`](https://v6.mantine.dev/core/stack/?t=props) | -       | Extra props for the `leftNode` stack container                  |
+| rightNode                 | `ReactNode`                                                | -       | Content displayed in the right column                           |
+| rightNodeStackProps       | [`StackProps`](https://v6.mantine.dev/core/stack/?t=props) | -       | Extra props for the `rightNode` stack container                 |
+| titleNode                 | `ReactNode`                                                | -       | Content displayed at the center of the middle column            |
+| titleNodeGroupProps       | [`GroupProps`](https://v6.mantine.dev/core/group/?t=props) | -       | Extra props for the `titleNode` group container                 |
+| topNode                   | `ReactNode`                                                | -       | Content displayed at the top of the middle column               |
+| topNodeGroupProps         | [`GroupProps`](https://v6.mantine.dev/core/group/?t=props) | -       | Extra props for the `topNode` group container                   |
+| ...                       | -                                                          | -       | extends [Flex props](https://v6.mantine.dev/core/flex/?t=props) |

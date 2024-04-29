@@ -1,0 +1,36 @@
+import { GitHubLogo } from '../../../src/icons/GitHubLogo';
+
+# Header Search
+
+<Description
+  extendsInfo={[
+    {
+      label: 'SearchBar',
+      link: './search-bar',
+      logo: <GitHubLogo />,
+    },
+  ]}
+  importExample="import { HeaderSearch } from '@smile/haring-react';"
+  packageInfo={{
+    label: '@smile/haring-react',
+    link: 'https://www.npmjs.com/package/@smile/haring-react',
+  }}
+  sourceInfo={{
+    link: 'https://github.com/Smile-SA/haring/blob/main/packages/haring-react/src/Components/HeaderSearch/HeaderSearch.tsx',
+  }}
+  storybookInfo="3-custom-components-headersearch--docs"
+>
+  Render a [SearchBar](./search-bar) inside a
+  [Box](https://v6.mantine.dev/core/box/)
+</Description>
+
+## Storybook Docs
+
+<StorybookEmbed storyId="3-custom-components-headersearch--docs" height="900" />
+
+## Props
+
+| Name     | Type                                           | Default | Description                                                           |
+| -------- | ---------------------------------------------- | ------- | --------------------------------------------------------------------- |
+| boxProps | [`BoxProps`](https://v6.mantine.dev/core/box/) | -       | Props for [Mantine's Box](https://v6.mantine.dev/core/box/) component |
+| ...      | -                                              | -       | Extends [SearchBarProps](./search-bar#props)                          |

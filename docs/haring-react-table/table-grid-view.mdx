@@ -1,0 +1,57 @@
+import { GitHubLogo } from '../../src/icons/GitHubLogo';
+import StorybookEmbed from '../../src/components/StorybookEmbed/StorybookEmbed';
+import Description from '../../src/components/Description/Description';
+
+# Table Grid View
+
+<Description
+  extendsInfo={[
+    {
+      label: 'SwitchableView',
+      link: '../haring-react/components/switchable-view',
+      logo: <GitHubLogo />,
+    },
+  ]}
+  importExample="import { TableGridView } from '@smile/haring-react-table';"
+  packageInfo={{
+    label: '@smile/haring-react-table',
+    link: 'https://www.npmjs.com/package/@smile/haring-react-table',
+  }}
+  sourceInfo={{
+    link: 'https://github.com/Smile-SA/haring/blob/main/packages/haring-react-table/src/Components/TableGridView/TableGridView.tsx',
+  }}
+  storybookInfo="3-custom-components-tablegridview--docs"
+>
+  Renders a [SwitchableView](../haring-react/components/switchable-view)
+  pre-configured with a [Table](./table) view and a
+  [ThumbnailGrid](../haring-react/components/thumbnail-grid) view, the views
+  share the same data, selection and actions
+</Description>
+
+## Storybook Docs
+
+<StorybookEmbed
+  storyId="3-custom-components-tablegridview--docs"
+  height="2450"
+/>
+
+## Props
+
+| Name                  | Type                                                                                                                                                                                              | Default | Description                                                                                                                                           |
+| --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
+| data <Required/>      | `Record<string, unknown>[]`                                                                                                                                                                       | -       | Array of data objects, loaded in both views                                                                                                           |
+| gridProps <Required/> | [`ITableGridViewGridProps`](#itablegridviewgridprops)                                                                                                                                             | -       | Props for the grid view, field mapping values are used to convert any data object in `data` into [`Thumbnails`](../haring-react/components/thumbnail) |
+| tableProp <Required/> | [`Omit<ITablePropsData, 'data'>`](./table#props)                                                                                                                                                  | -       | Props for the table view, omitting `data`                                                                                                             |
+| actions               | [`IAction`](../shared-types/actions#iactiont)`<`[`ITableData`](./table#itabledatadata-extends-recordstring-unknown)`\|`[`IThumbnailData`](../haring-react/components/thumbnail#ithumbnaildata)`>` | -       | Array of actions for both views, either individual row/thumbnail or mass actions                                                                      |
+| defaultView           | `'grid' \| 'table'`                                                                                                                                                                               | -       | Data view that will be active by default, either `grid` or `table`                                                                                    |
+| ...                   | -                                                                                                                                                                                                 | -       | Extends [SwitchableView props](../haring-react/components/switchable-view#props), omitting `views`                                                    |
+
+### `ITableGridViewGridProps`
+
+| Attribute         | Type     | Description                                                                                                                        |
+| ----------------- | -------- | ---------------------------------------------------------------------------------------------------------------------------------- |
+| iconTypeFieldName | `string` | Name of field in the data object that will be mapped to the [`Thumbnail`](../haring-react/components/thumbnail)'s `iconType` field |
+| idFieldName       | `string` | Name of field in the data object that will be mapped to the [`Thumbnail`](../haring-react/components/thumbnail)'s `id` field       |
+| imageFieldName    | `string` | Name of field in the data object that will be mapped to the [`Thumbnail`](../haring-react/components/thumbnail)'s `image` field    |
+| labelFIeldName    | `string` | Name of field in the data object that will be mapped to the [`Thumbnail`](../haring-react/components/thumbnail)'s `label` field    |
+| ...               | -        | Extends [`IThumbnailGridProps`](../haring-react/components/thumbnail-grid#props), omitting `thumbnails`                            |
