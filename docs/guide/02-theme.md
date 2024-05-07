@@ -31,9 +31,9 @@ The code might look like this:
   <AppShell header={<Header searchTheme={primary}>...</Header>}>
     <FoldableColumnLayout>
       <MantineProvider theme={secondary}>
-        <InfoCard>
+        <InfoBox>
           <Dropzone />
-        </InfoCard>
+        </InfoBox>
       </MantineProvider>
       <TableGridView />
     </FoldableColumnLayout>

@@ -1,0 +1,37 @@
+# Header Menu
+
+<Description
+  importExample="import { HeaderMenu } from '@smile/haring-react';"
+  packageInfo={{
+    label: '@smile/haring-react',
+    link: 'https://www.npmjs.com/package/@smile/haring-react',
+  }}
+  sourceInfo={{
+    link: 'https://github.com/Smile-SA/haring/blob/main/packages/haring-react/src/Components/HeaderMenu/HeaderMenu.tsx',
+  }}
+  storybookInfo="3-custom-components-headermenu--docs"
+>
+  Renders a list of menus as either a horizontal list of NavLink components or a
+  vertical SidebarMenu in mobile mode
+</Description>
+
+## Storybook Docs
+
+<StorybookEmbed storyId="3-custom-components-headermenu--docs" height="1210" />
+
+## Props
+
+| Name              | Type                   | Default | Description                                                                                                                          |
+| ----------------- | ---------------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------ |
+| menus <required/> | `IHeaderMenuMenu<T>[]` | -       | Array of menu objets to be rendered in vertical or horizontal lists                                                                  |
+| isMobile          | `boolean`              | `false` | Determines if the menus will be displayed as a horizontal list of NavLink components (desktop) or as a vertical SidebarMenu (mobile) |
+| navLinkComponent  | `ElementType`          | `"a"`   | Type of Element tag used for the NavLink components                                                                                  |
+
+## IHeaderMenuMenu
+
+`IHeaderMenuMenu` has a generic `T` that extend of `number | string` and it extend of `IMenuItem<T>`
+
+| Name     | Type                   | Description                                      |
+| -------- | ---------------------- | ------------------------------------------------ |
+| children | `IHeaderMenuMenu<T>[]` | Object array to be rendered in a header sub-menu |
+| url      | `string`               | the url of the navigation link                   |
