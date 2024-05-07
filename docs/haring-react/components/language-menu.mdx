@@ -6,7 +6,7 @@ import { GitHubLogo } from '../../../src/icons/GitHubLogo';
   extendsInfo={[
     {
       label: 'ButtonList',
-      link: './button-list-or-dropdown',
+      link: './button-list',
       logo: <GitHubLogo />,
     },
   ]}
@@ -20,11 +20,11 @@ import { GitHubLogo } from '../../../src/icons/GitHubLogo';
   }}
   storybookInfo="3-custom-components-languagemenu--docs"
 >
-  It inherits from the [ButtonList](./button-list-or-dropdown) component. It
-  displays a list of language buttons with or without flags in a 4x3 or 1x1
-  format. When the number of buttons exceeds a specified threshold (controlled
-  by the maxButtonItems property), the component dynamically transforms into a
-  dropdown menu.
+  It inherits from the [ButtonList](./button-list) component. It displays a list
+  of language buttons with or without flags in a 4x3 or 1x1 format. When the
+  number of buttons exceeds a specified threshold (controlled by the
+  maxButtonItems property), the component dynamically transforms into a dropdown
+  menu.
 </Description>
 
 ## Storybook Docs
@@ -33,13 +33,13 @@ import { GitHubLogo } from '../../../src/icons/GitHubLogo';
 
 ## Props
 
-LanguageMenu takes a `<Data>` generic type that extends `Record<string, unknown>`, to be used by [ActionList](./action-row-overflow).
+LanguageMenu takes a `<Data>` generic type that extends `Record<string, unknown>`, to be used by [ActionList](./action-list).
 
 | Name                  | Type      | Default | Description                                                                                  |
 | --------------------- | --------- | ------- | -------------------------------------------------------------------------------------------- |
 | languages <Required/> | `ILang[]` | -       | Is the array of langs of type `ILang` displayed into the component                           |
 | squareFormat          | `boolean` | `false` | Displays the default 4x3 format, If this prop is set to true, it shows flags in a 1x1 format |
-| ...                   |           | -       | Extend props from [ButtonList](./button-list-or-dropdown) component                          |
+| ...                   |           | -       | Extend props from [ButtonList](./button-list) component                                      |
 
 ## `ILang`
 
