@@ -5,8 +5,8 @@ import { GitHubLogo } from '../../../src/icons/GitHubLogo';
 <Description
   extendsInfo={[
     {
-      label: 'ActionRowOverflow',
-      link: './action-row-overflow',
+      label: 'ActionList',
+      link: './action-list',
       logo: <GitHubLogo />,
     },
   ]}
@@ -31,9 +31,9 @@ import { GitHubLogo } from '../../../src/icons/GitHubLogo';
 
 ## Props
 
-ActionBar takes a `<Data>` generic type that extends `Record<string, unknown>`, to be used by [ActionRowOverflow](./action-row-overflow).
+ActionBar takes a `<Data>` generic type that extends `Record<string, unknown>`, to be used by [ActionList](./action-list).
 
 | Name                              | Type                                   | Default                                                                 | Description                                                                                                                                                                         |
 | --------------------------------- | -------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | selectedElementsLabel <Required/> | `(selectedElements: number) => string` | ``(selectedElements: number) => `${selectedElements} file(s) selected`` | Function used to generate the string that displays how many elements are currently selected, it gives the current number of elements in the `selectedElements` array as a parameter |
-| ...                               | -                                      | -                                                                       | extends [`ActionRowOverflow props`](./action-row-overflow#props)                                                                                                                    |
+| ...                               | -                                      | -                                                                       | extends [`ActionList props`](./action-list#props)                                                                                                                                   |
