@@ -1,4 +1,4 @@
-# Address gouv autocomplete field
+# Address Gouv Autocomplete Field
 
 <Description
   extendsInfo={[
@@ -17,7 +17,7 @@
   }}
 >
   An autocomplete field which is a [`FetchAutocompleteField
-  Props`](./FetchAutocompleteField) component configured for the
+  Props`](./fetch-autocomplete-field) component configured for the
   [`api-Adresse.data.gouv`](https://adresse.data.gouv.fr/).
 </Description>
 
@@ -36,11 +36,9 @@
 | lon         | `string`                                                 | `''`                                                                                      | To be filled in to prioritize these longitude coordinates in the search results.                                                                            |
 | type        | `string`                                                 | `''`                                                                                      | To be filled in to reduce to specific type of results of the search.                                                                                        |
 | onFetchData | `(value: string) => Promise<IValue<IAddressGouvData>[]>` | `A default function getDataAddressGouv that makes a call to the api-adresse.gouv.fr API.` | This callback function return field value to the parameters and to be return `Promise<IValue<IAddressGouvData>[]>` value. By default this props is defined. |
-| ...         | -                                                        | -                                                                                         | extends [`FetchAutocompleteField Props`](./FetchAutocompleteField/#props)                                                                                   |
+| ...         | -                                                        | -                                                                                         | extends [`FetchAutocompleteField Props`](./fetch-autocomplete-field/#props)                                                                                 |
 
 ## IAddressGouvData
-
-IAddressGouvData contain `properties` object with thats types:
 
 | name        | type     | Description            |
 | ----------- | -------- | ---------------------- |

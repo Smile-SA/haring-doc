@@ -1,0 +1,114 @@
+# Dynamic Zone
+
+<Description
+  extendsInfo={[
+    {
+      label: 'Container',
+      link: 'https://mantine.dev/core/container/',
+    },
+  ]}
+  importExample="import { DynamicZone } from '@smile/haring-react';"
+  packageInfo={{
+    label: '@smile/haring-react',
+    link: 'https://www.npmjs.com/package/@smile/haring-react',
+  }}
+  sourceInfo={{
+    link: 'https://github.com/Smile-SA/haring/tree/main/packages/haring-react/src/Form/DynamicZone/DynamicZone.tsx',
+  }}
+>
+  Controlled container that displays a dynamic zone.
+
+Buttons at the bottom can be clicked to add new blocks into the zone, each block is displayed in the zone with header, footer, actions and the content is rendered through a render function provided by the parent component
+
+</Description>
+
+## Storybook Docs
+
+<StorybookEmbed storyId="3-custom-form-dynamiczone--docs" height="620" />
+
+## Props
+
+DynamicZone takes a `<Block>` generic type that extends `IBaseBlock`.
+
+| Name                             | Type                                                                                  | Default | Description                                                                                                                      |
+| -------------------------------- | ------------------------------------------------------------------------------------- | ------- | -------------------------------------------------------------------------------------------------------------------------------- |
+| blockOptions <Required/>         | [`IBaseBlockButton`](#ibaseblockbutton)`[]`                                           | -       | Array of `IBaseBlockButton`, displays as buttons to add blocks at the bottom of the zone                                         |
+| blocks <Required/>               | `Block[]`                                                                             | -       | Array of `Block`, displays as list of [`DynamicZoneBlock`](#dynamic-zone-block)                                                  |
+| onAppendBlock <Required/>        | `(blockType: string) => void`                                                         | -       | Callback function called when a block button is clicked to append a new block                                                    |
+| onRenderBlockContent <Required/> | `(block: Block, index: number) => ReactElement`                                       | -       | Callback function called when a block is being rendered in the list, parent needs to return the rendered content                 |
+| onToggleBlock <Required/>        | `(block: Block, index: number, opened: boolean) => void`                              | -       | Callback function called when a block's toggle button is clicked to open/close it                                                |
+| blockCardProps                   | [`CardProps`](https://mantine.dev/core/card/?t=props)                                 | -       | Extra props for the internal [Card](https://mantine.dev/core/card/) component, root of [`DynamicZoneBlock`](#dynamic-zone-block) |
+| blocksStackProps                 | [`StackProps`](https://mantine.dev/core/stack/?t=props)                               | -       | Extra props for the internal [Stack](https://mantine.dev/core/stack/) component, child of the root Container                     |
+| bottomContainerProps             | [`ContainerProps`](https://mantine.dev/core/container/?t=props)                       | -       | Extra props for the internal [Container](https://mantine.dev/core/container/) component, child of the root Container             |
+| buttonsGroupProps                | [`GroupProps`](https://mantine.dev/core/group/?t=props)                               | -       | Extra props for the internal [Group](https://mantine.dev/core/group/) component, container of the button area                    |
+| buttonsText                      | `string`                                                                              | -       | Content of button area's optional header, inside a [Text](https://mantine.dev/core/text/) component                              |
+| buttonsTextProps                 | [`TextProps`](https://mantine.dev/core/text/?t=props)                                 | -       | Extra props for the internal [Text](https://mantine.dev/core/text/) component, container of the button area's optional header    |
+| internalBlockCardProps           | [`IDynamicZoneBlockInternalComponentProps`](#idynamiczoneblockinternalcomponentprops) | -       | Extra internal component props passed to [`DynamicZoneBlock`](#dynamic-zone-block)                                               |
+| ...                              | -                                                                                     | -       | extends [`Container Props`](https://mantine.dev/core/container/?t=props), root container                                         |
+
+## `IBaseBlock`
+
+| Name                    | Type                                                                                                                | Default | Description                                                                                                                    |
+| ----------------------- | ------------------------------------------------------------------------------------------------------------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------ |
+| id <Required/>          | `string`                                                                                                            | -       | Used internally as keys and for other reasons, should be unique and not be modified once set                                   |
+| opened <Required/>      | `boolean`                                                                                                           | -       | Controlled value that determines if the block is opened or not                                                                 |
+| blockType <Required/>   | `string`                                                                                                            | -       | Type of the block being rendered, sent back to parent for render, used as a kind of block type ID here and in IBaseBlockButton |
+| blockHeader <Required/> | `ReactNode`                                                                                                         | -       | Content of the block header                                                                                                    |
+| blockFooter             | `ReactNode`                                                                                                         | -       | Content of the block footer                                                                                                    |
+| blockActions            | [`IAction`](../../shared-types/actions#iactiont)`<`[`IDynamicZoneBlockReference`](#idynamiczoneblockreference)`>[]` | -       | Action(s) displayed to the right of the block header                                                                           |
+
+## `IBaseBlockButton`
+
+| Name                  | Type     | Default | Description                                                                                                              |
+| --------------------- | -------- | ------- | ------------------------------------------------------------------------------------------------------------------------ |
+| blockType <Required/> | `string` | -       | Type of the block being rendered, sent back to parent for render, used as a kind of block type ID here and in IBaseBlock |
+| label <Required/>     | `string` | -       | Label of button to add a new block                                                                                       |
+
+---
+
+## Dynamic Zone Block
+
+Sub-component that renders one block with header, content and footer.
+
+### Props
+
+| Name                       | Type                                                                                                                | Default | Description                                                                                                                                                              |
+| -------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| children <Required/>       | `ReactNode`                                                                                                         | -       | Main content of block                                                                                                                                                    |
+| headerChildren <Required/> | `ReactNode`                                                                                                         | -       | Content of header                                                                                                                                                        |
+| onToggle <Required/>       | `(opened: boolean) => void`                                                                                         | -       | Callback function called when opening/close button is clicked                                                                                                            |
+| opened <Required/>         | `boolean`                                                                                                           | -       | Controlled value the determines if the block's [Collapse](https://mantine.dev/core/collapse/) is open or closed                                                          |
+| reference <Required/>      | [`IDynamicZoneBlockReference`](#idynamiczoneblockreference)                                                         | -       | Object used internally and sent back to parent in callbacks, declares a block's `id`, `index` and the total `arrayLength` of blocks                                      |
+| actions                    | [`IAction`](../../shared-types/actions#iactiont)`<`[`IDynamicZoneBlockReference`](#idynamiczoneblockreference)`>[]` | -       | Array of [`IAction`](../../shared-types/actions#iactiont) using [`IDynamicZoneBlockReference`](#idynamiczoneblockreference) as `T`, displayed to the right of the header |
+| footerChildren             | `ReactNode`                                                                                                         | -       | Optional content of footer                                                                                                                                               |
+| internalComponentProps     | [`IDynamicZoneBlockInternalComponentProps`](#idynamiczoneblockinternalcomponentprops)                               | -       | Group of extra internal component props                                                                                                                                  |
+| ...                        | -                                                                                                                   | -       | extends [`Card Props`](https://mantine.dev/core/card/?t=props)                                                                                                           |
+
+### `IDynamicZoneBlockReference`
+
+| Name                    | Type     | Default | Description                                       |
+| ----------------------- | -------- | ------- | ------------------------------------------------- |
+| arrayLength <Required/> | `number` | -       | Total length of parent's `blocks` array           |
+| id <Required/>          | `string` | -       | ID of the block                                   |
+| index <Required/>       | `number` | -       | Index of the block in the parent's `blocks` array |
+| ...                     | -        | -       | extends `Record<string, unknown>`                 |
+
+### `IDynamicZoneBlockInternalComponentProps`
+
+| Name                   | Type                                                                                                                   | Default | Description                                                                                         |
+| ---------------------- | ---------------------------------------------------------------------------------------------------------------------- | ------- | --------------------------------------------------------------------------------------------------- |
+| contentCollapseProps   | [`CollapseProps`](https://mantine.dev/core/collapse/?t=props)                                                          | -       | Extra props for the internal [Collapse](https://mantine.dev/core/collapse) component                |
+| contentContainerProps  | [`ContainerProps`](https://mantine.dev/core/container/?t=props)                                                        | -       | Extra props for the internal [Container](https://mantine.dev/core/container) component              |
+| footerCardSectionProps | [`CardSectionProps`](https://mantine.dev/core/card/#cardsection)                                                       | -       | Extra props for the internal [CardSection](https://mantine.dev/core/card/#cardsection) component    |
+| headerActionListProps  | [`IActionListProps`](../components/action-list#props)`<`[`IDynamicZoneBlockReference`](#idynamiczoneblockreference)`>` | -       | Extra props for the internal [ActionList](../components/action-list) component                      |
+| headerCardSectionProps | [`CardSectionProps`](https://mantine.dev/core/card/#cardsection)                                                       | -       | Extra props for the internal [CardSection](https://mantine.dev/core/card/#cardsection) component    |
+| headerGroupProps       | [`GroupProps`](https://mantine.dev/core/group/?t=props)                                                                | -       | Extra props for the internal [Group](https://mantine.dev/core/group) component                      |
+| toggleComponentProps   | [`IDynamicZoneBlockToggleProps`](#idynamiczoneblocktoggleprops)                                                        | -       | Extra props passed to the internal [ActionIcon](https://mantine.dev/core/action-icon) toggle button |
+
+### `IDynamicZoneBlockToggleProps`
+
+| Name            | Type                                                               | Default | Description                                                                                                         |
+| --------------- | ------------------------------------------------------------------ | ------- | ------------------------------------------------------------------------------------------------------------------- |
+| actionIconProps | [`ActionIconProps`](https://mantine.dev/core/action-icon/?t=props) | -       | Extra props for the internal [ActionIcon](https://mantine.dev/core/action-icon) component used as the toggle button |
+| downIcon        | `ReactNode`                                                        | -       | Content of toggle button in down state                                                                              |
+| upIcon          | `ReactNode`                                                        | -       | Content of toggle button in up state                                                                                |
